@@ -4,27 +4,31 @@ using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Prism.Events;
 using Prism.Mvvm;
+using PrismMvvmApp.Events;
 using PrismMvvmApp.Models;
 
 namespace PrismMvvmApp.ViewModels
 {
     class MainViewModel: BindableBase
     {
-        private MainModel _mainmodel;
-        public MainModel MainModel
+     
+        private string _maintitle;
+        public string MainTitle
         {
-            get
-            {return _mainmodel;}
-            set
-            {
-                SetProperty(ref _mainmodel,value);
-            }
+            get { return _maintitle; }
+            set { SetProperty(ref _maintitle, value); }
         }
-        public MainViewModel()
+
+        public MainViewModel(IEventAggregator eventAggregator)
         {
-            MainModel = new MainModel();
+            eventAggregator.GetEvent<MainTitleEvent>().Subscribe(IOModeRecevied);
         }
-      
+
+        private void IOModeRecevied(string payload)
+        {
+            MainTitle = payload;
+        }
     }
 }

@@ -91,12 +91,14 @@ namespace PrismMvvmApp.ViewModels
         private void ExcuteEquipManagement()
         {
             _iRegionManager.RequestNavigate("ContentsRegion", "EquipManagementView");
+            _eventAggregator.GetEvent<MainTitleEvent>().Publish("EquipManagementView");
         }
         private void ExcuteIOOutputManagement()
         {
             //GotoContents("I/OManagement");
             _iRegionManager.RequestNavigate("ContentsRegion", "IOManagementView");
             _eventAggregator.GetEvent<IO_TitleEvent>().Publish("Output");
+            _eventAggregator.GetEvent<MainTitleEvent>().Publish("IOManagementView-Output");
         }
 
         private void ExcuteIOInputManagement()
@@ -104,6 +106,7 @@ namespace PrismMvvmApp.ViewModels
             //GotoContents("I/OManagement");
             _iRegionManager.RequestNavigate("ContentsRegion", "IOManagementView");
             _eventAggregator.GetEvent<IO_TitleEvent>().Publish("Input");
+            _eventAggregator.GetEvent<MainTitleEvent>().Publish("IOManagementView-Input");
         }
 
         private void ExcuteIOParameterManagement()
@@ -111,27 +114,34 @@ namespace PrismMvvmApp.ViewModels
             //GotoContents("I/OManagement");
             _iRegionManager.RequestNavigate("ContentsRegion", "IOManagementView");
             _eventAggregator.GetEvent<IO_TitleEvent>().Publish("Parameter");
+            _eventAggregator.GetEvent<MainTitleEvent>().Publish("IOManagementView-Parameter");
         }
 
         private void ExcuteBaseModel()
         {
             GotoContents("BaseModel");
+            _eventAggregator.GetEvent<MainTitleEvent>().Publish("BaseModel");
         }
         private void ExcuteCustomModel()
         {
             GotoContents("CustomModel");
+            _eventAggregator.GetEvent<MainTitleEvent>().Publish("CustomModel");
         }
         private void ExcuteLayoutDesign()
         {
             GotoContents("LayoutDesign");
+
+            _eventAggregator.GetEvent<MainTitleEvent>().Publish("LayOutDesign");
         }
         private void ExcuteTestSimmulator()
         {
             GotoContents("TestSimmulator");
+            _eventAggregator.GetEvent<MainTitleEvent>().Publish("TestSimmulator");
         }
         private void ExcuteMonitoring()
         {
             GotoContents("Monitoring");
+            _eventAggregator.GetEvent<MainTitleEvent>().Publish("Monitoring");
         }
 
 

@@ -1,4 +1,6 @@
-﻿using Prism.Mvvm;
+﻿using Prism.Events;
+using Prism.Mvvm;
+using PrismMvvmApp.Events;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -10,6 +12,11 @@ namespace PrismMvvmApp.ViewModels
 {
     class HeaderViewModel : BindableBase
     {
-        
+
+        public HeaderViewModel(IEventAggregator eventAggregator)
+        {
+        }
+
+
     }  
 }

@@ -8,7 +8,7 @@
         prism:ViewModelLocator.AutoWireViewModel="True"
         xmlns:metro="http://metro.mahapps.com/winfx/xaml/controls"
         mc:Ignorable="d"
-        Title="SEMES-ProtoType ver 0.0.1" Height="550" Width="900">
+        Title="SEMES-ProtoType ver 0.0.1" Height="580" Width="1400">
     <Grid Margin="0,0,0,0" ShowGridLines="False">
         <Grid.RowDefinitions>
             <RowDefinition Height="30"/>
@@ -19,7 +19,7 @@
             <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
         <Border Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="2" BorderBrush="LightGray" BorderThickness="2">
-            <TextBlock HorizontalAlignment="Center"  Text="{Binding MainModel.Title}"/>
+            <TextBlock HorizontalAlignment="Center" FontSize="20" Text="{Binding MainTitle}"/>
         </Border>
         <!--<ContentControl Grid.Row="0" Grid.ColumnSpan="2" prism:RegionManager.RegionName="HeaderRegion"/>-->
         <ContentControl Grid.Column="0" Grid.Row="1" prism:RegionManager.RegionName="MenuRegion"/>
