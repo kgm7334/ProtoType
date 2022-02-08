@@ -1,0 +1,60 @@
+﻿<UserControl x:Class="PrismMvvmApp.Views.MenuView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:PrismMvvmApp.Views"
+             xmlns:prism="http://prismlibrary.com/"
+             prism:ViewModelLocator.AutoWireViewModel="True"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="200">
+    <UserControl.Resources>
+      
+    </UserControl.Resources>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <RadioButton Grid.Row="0" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Style="{StaticResource {x:Type ToggleButton}}" Command="{Binding GotoEquipManagementCommand}">
+            <RadioButton.Content>
+                <TextBlock Text="EqUip Management"/>
+            </RadioButton.Content>
+        </RadioButton>
+        <RadioButton Grid.Row="1" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Style="{StaticResource {x:Type ToggleButton}}" Command="{Binding GotoIOManagementCommand}">
+            <RadioButton.Content>
+                <TextBlock Text="I/O Management"/>
+            </RadioButton.Content>
+        </RadioButton>
+        <RadioButton Grid.Row="2" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Style="{StaticResource {x:Type ToggleButton}}" Command="{Binding GotoBaseModelCommand}">
+            <RadioButton.Content>
+                <TextBlock Text="BaseModel"/>
+            </RadioButton.Content>
+        </RadioButton>
+        <RadioButton Grid.Row="3" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Style="{StaticResource {x:Type ToggleButton}}" Command="{Binding GotoCustomModelCommand}">
+            <RadioButton.Content>
+                <TextBlock Text="CustomModel"/>
+            </RadioButton.Content>
+        </RadioButton>
+        <RadioButton Grid.Row="4" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Style="{StaticResource {x:Type ToggleButton}}" Command="{Binding GotoLayoutDesignCommand}">
+            <RadioButton.Content>
+                <TextBlock Text="LayoutDesign"/>
+            </RadioButton.Content>
+        </RadioButton>
+        <RadioButton Grid.Row="5" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Style="{StaticResource {x:Type ToggleButton}}"  Command="{Binding GotoTestSimmulatorCommand}">
+            <RadioButton.Content>
+                <TextBlock Text="TestSimmulator"/>
+            </RadioButton.Content>
+        </RadioButton>
+        <RadioButton Grid.Row="6" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Style="{StaticResource {x:Type ToggleButton}}" Command="{Binding GotoMonitoringCommand}">
+            <RadioButton.Content>
+                <TextBlock Text="Monitoring"/>
+            </RadioButton.Content>
+        </RadioButton>
+    </Grid>
+</UserControl>
