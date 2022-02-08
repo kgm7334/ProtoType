@@ -26,9 +26,10 @@
                             <RowDefinition Height="35" />
                             <RowDefinition />
                         </Grid.RowDefinitions>
-                        <Grid Grid.Row="0">
+                        <Grid Grid.Row="0" ShowGridLines="False">
                             <Grid.ColumnDefinitions>
-                                <ColumnDefinition/>
+                                <ColumnDefinition />
+                                <ColumnDefinition Width="8"/>
                                 <ColumnDefinition Width="50"/>
                                 <ColumnDefinition Width="8"/>
                                 <ColumnDefinition Width="50"/>
@@ -36,9 +37,10 @@
                                 <ColumnDefinition Width="50"/>
                                 <ColumnDefinition Width="8"/>
                             </Grid.ColumnDefinitions>
-                            <Button Grid.Column="1" Content="추가" Command="{Binding IOCodeListAddCommand}"/>
-                            <Button Grid.Column="3" Content="수정" Command="{Binding IOCodeListUpDateCommand}" />
-                            <Button Grid.Column="5" Content="삭제" Command="{Binding IOCodeListRemoveCommand}" />
+                            <TextBlock Grid.Column="0" Text="{Binding IoModeTitle}" Margin="10,0,0,0" FontSize="20" />
+                            <Button Grid.Column="2" Content="추가" Command="{Binding IOCodeListAddCommand}"/>
+                            <Button Grid.Column="4" Content="수정" Command="{Binding IOCodeListUpDateCommand}" />
+                            <Button Grid.Column="6" Content="삭제" Command="{Binding IOCodeListRemoveCommand}" />
                         </Grid>
 
                             
@@ -46,9 +48,9 @@
                             <Border BorderBrush="Gray" BorderThickness="1" Margin="8,4,8,8">
                                 <DataGrid ItemsSource="{Binding IOCodeList}" AutoGenerateColumns="False" >
                                     <DataGrid.Columns>
+                                        <DataGridTextColumn Header="ID" Binding="{Binding ID}" Width="*"/>
                                         <DataGridTextColumn Header="Group" Binding="{Binding Group}" Width="*"/>
                                         <DataGridTextColumn Header="Name" Binding="{Binding Name}" Width="*"/>
-                                        <DataGridTextColumn Header="ID" Binding="{Binding ID}" Width="*"/>
                                         <DataGridTextColumn Header="Position" Binding="{Binding Position}" Width="*"/>
                                         <DataGridTextColumn Header="DataType" Binding="{Binding DataType}" Width="*"/>
                                     </DataGrid.Columns>

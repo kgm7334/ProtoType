@@ -22,6 +22,13 @@ namespace PrismMvvmApp.ViewModels
             set { SetProperty(ref _message, value); }
         }
 
+        private string _iomodetitle;
+        public string IoModeTitle
+        {
+            get { return _iomodetitle; }
+            set { SetProperty(ref _iomodetitle, value); }
+        }
+
         private IDialogService _dialogService;
 
         private ObservableCollection<IOCode_Source> _iocodelist;
@@ -80,6 +87,7 @@ namespace PrismMvvmApp.ViewModels
 
             Message = "This is I/O Management View";
             eventAggregator.GetEvent<MessageEvent>().Subscribe(MessageRecevied);
+            eventAggregator.GetEvent<IO_TitleEvent>().Subscribe(IOModeRecevied);
             _dialogService = dialogService;
         }
 
@@ -122,6 +130,11 @@ namespace PrismMvvmApp.ViewModels
         private void MessageRecevied(string payload)
         {
             Message = payload;
+        }
+
+        private void IOModeRecevied(string payload)
+        {
+            IoModeTitle = payload;
         }
     }
 }

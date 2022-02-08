@@ -82,6 +82,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Events\IO_TitleEvent.cs" />
     <Compile Include="Events\MessageEvent.cs" />
     <Compile Include="Models\IOCode_Source.cs" />
     <Compile Include="ViewModels\BaseModelViewModel.cs" />

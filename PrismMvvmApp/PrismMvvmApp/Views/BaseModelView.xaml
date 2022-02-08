@@ -5,12 +5,78 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:PrismMvvmApp.Views"
              mc:Ignorable="d" 
-             d:DesignHeight="450" d:DesignWidth="800">
-    <Grid VerticalAlignment="Center" HorizontalAlignment="Center">
+             d:DesignHeight="450" d:DesignWidth="800" Background="White">
+    <Grid ShowGridLines="True">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition Width="4*"/>
+        </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
             <RowDefinition/>
-            <RowDefinition/>
         </Grid.RowDefinitions>
-        <TextBlock Text="{Binding Message}"/>
+        <Border Grid.Column="0">
+            <StackPanel>
+                <Expander Width="auto" Background="White" ExpandDirection="Down" IsExpanded="False">
+                    <Expander.Header>
+                        <Bold>Nozzle</Bold>
+                    </Expander.Header>
+                    <Expander.Content>
+                        <Grid>
+                            <StackPanel>
+                                <Button Content="N1"/>
+                                <Button Content="N2"/>
+                                <Button Content="N3"/>
+                                <Button Content="N4"/>
+                            </StackPanel>
+                        </Grid>
+                    </Expander.Content>
+                </Expander>
+                <Expander Width="auto" Background="White" ExpandDirection="Down" IsExpanded="False">
+                    <Expander.Header>
+                        <Bold>Sensor</Bold>
+                    </Expander.Header>
+                    <Expander.Content>
+                        <Grid>
+                            <StackPanel>
+                                <Button Content="S1"/>
+                                <Button Content="S2"/>
+                                <Button Content="S3"/>
+                                <Button Content="S4"/>
+                            </StackPanel>
+                        </Grid>
+                    </Expander.Content>
+                </Expander>
+                <Expander Width="auto" Background="White" ExpandDirection="Down" IsExpanded="False">
+                    <Expander.Header>
+                        <Bold>Valve</Bold>
+                    </Expander.Header>
+                    <Expander.Content>
+                        <Grid>
+                            <StackPanel>
+                                <Button Content="N1"/>
+                                <Button Content="N2"/>
+                                <Button Content="N3"/>
+                                <Button Content="N4"/>
+                            </StackPanel>
+                        </Grid>
+                    </Expander.Content>
+                </Expander>
+                <Expander Width="auto" Background="White" ExpandDirection="Down" IsExpanded="False">
+                    <Expander.Header>
+                        <Bold>Pump</Bold>
+                    </Expander.Header>
+                    <Expander.Content>
+                        <Grid>
+                            <StackPanel>
+                                <Button Content="P1"/>
+                                <Button Content="P2"/>
+                                <Button Content="P3"/>
+                            </StackPanel>
+                        </Grid>
+                    </Expander.Content>
+                </Expander>
+            </StackPanel>
+        </Border>
+        <!--<TextBlock Text="{Binding Message}"/>-->
     </Grid>
 </UserControl>

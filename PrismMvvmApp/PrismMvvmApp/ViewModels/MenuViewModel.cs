@@ -19,8 +19,14 @@ namespace PrismMvvmApp.ViewModels
         private DelegateCommand _gotoEquipManagementcommand;
         public DelegateCommand GotoEquipManagementCommand { get; private set; }
 
-        private DelegateCommand _gotoIOManagementCommandcommand;
-        public DelegateCommand GotoIOManagementCommand { get; private set; }
+        private DelegateCommand _gotoIOInputManagementCommandcommand;
+        public DelegateCommand GotoIOInputManagementCommand { get; private set; }
+
+        private DelegateCommand _gotoIOOutputManagementCommandcommand;
+        public DelegateCommand GotoIOOutputManagementCommand { get; private set; }
+
+        private DelegateCommand _gotoIOParameterManagementCommandcommand;
+        public DelegateCommand GotoIOParameterManagementCommand { get; private set; }
 
         private DelegateCommand _gotoBaseModelcommand;
         public DelegateCommand GotoBaseModelCommand { get; private set; }
@@ -43,7 +49,9 @@ namespace PrismMvvmApp.ViewModels
         public MenuViewModel(IRegionManager iregionManager,IEventAggregator eventAggregtor)
         {
             GotoEquipManagementCommand = new DelegateCommand(ExcuteEquipManagement);
-            GotoIOManagementCommand = new DelegateCommand(ExcuteIOManagement);
+            GotoIOInputManagementCommand = new DelegateCommand(ExcuteIOInputManagement);
+            GotoIOOutputManagementCommand = new DelegateCommand(ExcuteIOOutputManagement);
+            GotoIOParameterManagementCommand = new DelegateCommand(ExcuteIOParameterManagement);
             GotoBaseModelCommand = new DelegateCommand(ExcuteBaseModel);
             GotoCustomModelCommand = new DelegateCommand(ExcuteCustomModel);
             GotoLayoutDesignCommand = new DelegateCommand(ExcuteLayoutDesign);
@@ -82,12 +90,29 @@ namespace PrismMvvmApp.ViewModels
         }
         private void ExcuteEquipManagement()
         {
-            GotoContents("EquipManagement");
+            _iRegionManager.RequestNavigate("ContentsRegion", "EquipManagementView");
         }
-        private void ExcuteIOManagement()
+        private void ExcuteIOOutputManagement()
         {
-            GotoContents("I/OManagement");
+            //GotoContents("I/OManagement");
+            _iRegionManager.RequestNavigate("ContentsRegion", "IOManagementView");
+            _eventAggregator.GetEvent<IO_TitleEvent>().Publish("Output");
         }
+
+        private void ExcuteIOInputManagement()
+        {
+            //GotoContents("I/OManagement");
+            _iRegionManager.RequestNavigate("ContentsRegion", "IOManagementView");
+            _eventAggregator.GetEvent<IO_TitleEvent>().Publish("Input");
+        }
+
+        private void ExcuteIOParameterManagement()
+        {
+            //GotoContents("I/OManagement");
+            _iRegionManager.RequestNavigate("ContentsRegion", "IOManagementView");
+            _eventAggregator.GetEvent<IO_TitleEvent>().Publish("Parameter");
+        }
+
         private void ExcuteBaseModel()
         {
             GotoContents("BaseModel");

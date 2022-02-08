@@ -30,27 +30,27 @@
             <RowDefinition/>
             <RowDefinition/>
         </Grid.RowDefinitions>
-        <RadioButton Grid.Row="0" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Style="{StaticResource {x:Type ToggleButton}}" Command="{Binding GotoEquipManagementCommand}">
+        <RadioButton Grid.Row="0"  Grid.ColumnSpan="2" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Style="{StaticResource {x:Type ToggleButton}}" Command="{Binding GotoEquipManagementCommand}">
             <RadioButton.Content>
                 <TextBlock Text="EqUip Management"/>
             </RadioButton.Content>
         </RadioButton>
-        <RadioButton Grid.Row="1" Grid.ColumnSpan="2" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Style="{StaticResource {x:Type ToggleButton}}" Command="{Binding GotoIOManagementCommand}">
+        <RadioButton Grid.Row="1" Grid.ColumnSpan="2" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Style="{StaticResource {x:Type ToggleButton}}">
             <RadioButton.Content>
                 <TextBlock Text="I/O Management"/>
             </RadioButton.Content>
         </RadioButton>
-        <RadioButton Grid.Row="2" Grid.Column="1" VerticalContentAlignment="Center" HorizontalContentAlignment="Left" Style="{StaticResource {x:Type ToggleButton}}" Command="{Binding GotoIOManagementCommand}">
+        <RadioButton Grid.Row="2" Grid.Column="1" VerticalContentAlignment="Center" HorizontalContentAlignment="Left" Style="{StaticResource {x:Type ToggleButton}}" Command="{Binding GotoIOInputManagementCommand}">
             <RadioButton.Content>
                 <TextBlock Text="▶ Input"/>
             </RadioButton.Content>
         </RadioButton>
-        <RadioButton Grid.Row="3" Grid.Column="1" VerticalContentAlignment="Center" HorizontalContentAlignment="Left" Style="{StaticResource {x:Type ToggleButton}}" Command="{Binding GotoIOManagementCommand}">
+        <RadioButton Grid.Row="3" Grid.Column="1" VerticalContentAlignment="Center" HorizontalContentAlignment="Left" Style="{StaticResource {x:Type ToggleButton}}" Command="{Binding GotoIOOutputManagementCommand}">
             <RadioButton.Content>
                 <TextBlock Text="▶ Output"/>
             </RadioButton.Content>
         </RadioButton>
-        <RadioButton Grid.Row="4" Grid.Column="1" VerticalContentAlignment="Center" HorizontalContentAlignment="Left" Style="{StaticResource {x:Type ToggleButton}}" Command="{Binding GotoIOManagementCommand}">
+        <RadioButton Grid.Row="4" Grid.Column="1" VerticalContentAlignment="Center" HorizontalContentAlignment="Left" Style="{StaticResource {x:Type ToggleButton}}" Command="{Binding GotoIOParameterManagementCommand}">
             <RadioButton.Content>
                 <TextBlock Text="▶ Parameter"/>
             </RadioButton.Content>
