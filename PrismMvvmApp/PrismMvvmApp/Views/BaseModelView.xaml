@@ -6,74 +6,102 @@
              xmlns:local="clr-namespace:PrismMvvmApp.Views"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800" Background="AliceBlue">
-    <Grid ShowGridLines="True">
+    <Grid ShowGridLines="False">
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="0.5*"/>
+            <ColumnDefinition Width="0.7*"/>
             <ColumnDefinition Width="3*"/>
-            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="2*"/>
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
             <RowDefinition/>
-            <RowDefinition Height="15*"/>
+            <RowDefinition Height="30*"/>
         </Grid.RowDefinitions>
         <Border Grid.Column="0" Grid.Row="0" Grid.RowSpan="2">
             <ScrollViewer>
                 <StackPanel ScrollViewer.CanContentScroll="True" ScrollViewer.VerticalScrollBarVisibility="Visible">
                     <Expander Width="auto" Background="White" ExpandDirection="Down" IsExpanded="true">
                         <Expander.Header>
-                            <Bold>Nozzle</Bold>
+                            <StackPanel Orientation="Horizontal">
+                                <TextBlock VerticalAlignment="Center" FontWeight="Bold">Nozzle</TextBlock>
+                                <Button Margin="5,0,0,0" Height="5" VerticalContentAlignment="Center" Background="LightSkyBlue">
+                                    <Button.Content>
+                                        <TextBlock FontWeight="Bold" FontSize="10" VerticalAlignment="Center" Text="+"/>
+                                    </Button.Content>
+                                </Button>
+                            </StackPanel>
                         </Expander.Header>
                         <Expander.Content>
                             <Grid>
                                 <StackPanel>
-                                    <Button Content="N1"/>
-                                    <Button Content="N2"/>
-                                    <Button Content="N3"/>
-                                    <Button Content="N4"/>
+                                    <Button Content="N1" Command="{Binding BaseModelGetPictureCommand}" CommandParameter="N1.png"/>
+                                    <Button Content="N2" Command="{Binding BaseModelGetPictureCommand}" CommandParameter="N2.png"/>
+                                    <Button Content="N3" Command="{Binding BaseModelGetPictureCommand}" CommandParameter="N3.png"/>
+                                    <Button Content="N4" Command="{Binding BaseModelGetPictureCommand}" CommandParameter="N4.png"/>
                                 </StackPanel>
                             </Grid>
                         </Expander.Content>
                     </Expander>
                     <Expander Width="auto" Background="White" ExpandDirection="Down" IsExpanded="true">
                         <Expander.Header>
-                            <Bold>Sensor</Bold>
+                            <StackPanel Orientation="Horizontal">
+                                <TextBlock VerticalAlignment="Center" FontWeight="Bold">Sensor</TextBlock>
+                                <Button Margin="5,0,0,0" Height="5" VerticalContentAlignment="Center" Background="LightSkyBlue">
+                                    <Button.Content>
+                                        <TextBlock FontWeight="Bold" FontSize="10" VerticalAlignment="Center" Text="+"/>
+                                    </Button.Content>
+                                </Button>
+                            </StackPanel>
                         </Expander.Header>
                         <Expander.Content>
                             <Grid>
                                 <StackPanel>
-                                    <Button Content="S1"/>
-                                    <Button Content="S2"/>
-                                    <Button Content="S3"/>
-                                    <Button Content="S4"/>
+                                    <Button Content="S1" Command="{Binding BaseModelGetPictureCommand}" CommandParameter="S1.png"/>
+                                    <Button Content="S2" Command="{Binding BaseModelGetPictureCommand}" CommandParameter="S2.png"/>
+                                    <Button Content="S3" Command="{Binding BaseModelGetPictureCommand}" CommandParameter="S3.png"/>
+                                    <Button Content="S4" Command="{Binding BaseModelGetPictureCommand}" CommandParameter="S4.png"/>
                                 </StackPanel>
                             </Grid>
                         </Expander.Content>
                     </Expander>
                     <Expander Width="auto" Background="White" ExpandDirection="Down" IsExpanded="true">
                         <Expander.Header>
-                            <Bold>Valve</Bold>
+                            <StackPanel Orientation="Horizontal">
+                                <TextBlock VerticalAlignment="Center" FontWeight="Bold">Valve</TextBlock>
+                                <Button Margin="5,0,0,0" Height="5" VerticalContentAlignment="Center" Background="LightSkyBlue">
+                                    <Button.Content>
+                                        <TextBlock FontWeight="Bold" FontSize="10" VerticalAlignment="Center" Text="+"/>
+                                    </Button.Content>
+                                </Button>
+                            </StackPanel>
                         </Expander.Header>
                         <Expander.Content>
                             <Grid>
                                 <StackPanel>
-                                    <Button Content="N1"/>
-                                    <Button Content="N2"/>
-                                    <Button Content="N3"/>
-                                    <Button Content="N4"/>
+                                    <Button Content="V1" Command="{Binding BaseModelGetPictureCommand}" CommandParameter="V1.png"/>
+                                    <Button Content="V2" Command="{Binding BaseModelGetPictureCommand}" CommandParameter="V2.png"/>
+                                    <Button Content="V3" Command="{Binding BaseModelGetPictureCommand}" CommandParameter="V3.png"/>
+                                    <Button Content="V4" Command="{Binding BaseModelGetPictureCommand}" CommandParameter="V4.png"/>
                                 </StackPanel>
                             </Grid>
                         </Expander.Content>
                     </Expander>
                     <Expander Width="auto" Background="White" ExpandDirection="Down" IsExpanded="true">
                         <Expander.Header>
-                            <Bold>Pump</Bold>
+                            <StackPanel Orientation="Horizontal">
+                                <TextBlock VerticalAlignment="Center" FontWeight="Bold">Motor</TextBlock>
+                                <Button Margin="5,0,0,0" Height="5" VerticalContentAlignment="Center" Background="LightSkyBlue">
+                                    <Button.Content>
+                                        <TextBlock FontWeight="Bold" FontSize="10" VerticalAlignment="Center" Text="+"/>
+                                    </Button.Content>
+                                </Button>
+                            </StackPanel>
                         </Expander.Header>
                         <Expander.Content>
                             <Grid>
                                 <StackPanel>
-                                    <Button Content="P1"/>
-                                    <Button Content="P2"/>
-                                    <Button Content="P3"/>
+                                    <Button Content="M1" Command="{Binding BaseModelGetPictureCommand}" CommandParameter="M1.png"/>
+                                    <Button Content="M2" Command="{Binding BaseModelGetPictureCommand}" CommandParameter="M2.png"/>
+                                    <Button Content="M3" Command="{Binding BaseModelGetPictureCommand}" CommandParameter="M3.png"/>
                                 </StackPanel>
                             </Grid>
                         </Expander.Content>
@@ -81,18 +109,8 @@
                 </StackPanel>
             </ScrollViewer>
         </Border>
-        <Border Grid.Column="2" Grid.Row="0">
-            <Grid>
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition/>
-                    <ColumnDefinition/>
-                </Grid.ColumnDefinitions>
-                <Button Content="Import" Grid.Column="0"/>
-                <Button Content="Export" Grid.Column="1"/>
-            </Grid>
-        </Border>
         <Border Grid.Column="2" Grid.Row="1" Background="AliceBlue">
-            <Grid  ShowGridLines="True">
+            <Grid>
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition/>
                 </Grid.ColumnDefinitions>
@@ -105,17 +123,17 @@
                         <RowDefinition Height="30"/>
                         <RowDefinition Height="*"/>
                     </Grid.RowDefinitions>
-                    <Border Grid.Row="0" Margin="0,5,10,0">
+                    <Border Grid.Row="0" Margin="0,0,10,0">
                         <Grid>
                             <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="3*"/>
+                                <ColumnDefinition Width="1.5*"/>
                                 <ColumnDefinition Width="*"/>
                                 <ColumnDefinition Width="*"/>
                             </Grid.ColumnDefinitions>
 
                             <TextBlock HorizontalAlignment="Center" Text="Input" Grid.Column="0" FontWeight="Bold" FontSize="15"/>
                             <Button Content="Add" Grid.Column="1"/>
-                            <Button Content="Sub" Grid.Column="2"/>
+                            <Button Content="Delete" Grid.Column="2"/>
                         </Grid>
                     </Border>
                     <Border BorderBrush="Gray" Grid.Row="1" BorderThickness="1" Margin="8,4,8,8">
@@ -129,17 +147,17 @@
                             </DataGrid.Columns>
                         </DataGrid>
                     </Border>
-                    <Border Grid.Row="2" Margin="0,5,10,0">
+                    <Border Grid.Row="2" Margin="0,0,10,0">
                         <Grid>
                             <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="3*"/>
+                                <ColumnDefinition Width="1.5*"/>
                                 <ColumnDefinition Width="*"/>
                                 <ColumnDefinition Width="*"/>
                             </Grid.ColumnDefinitions>
 
                             <TextBlock HorizontalAlignment="Center" Text="Parameter" Grid.Column="0" FontWeight="Bold" FontSize="15"/>
                             <Button Content="Add" Grid.Column="1"/>
-                            <Button Content="Sub" Grid.Column="2"/>
+                            <Button Content="Delete" Grid.Column="2"/>
                         </Grid>
                     </Border>
                     <Border BorderBrush="Gray" Grid.Row="3" BorderThickness="1" Margin="8,4,8,8">
@@ -153,17 +171,17 @@
                             </DataGrid.Columns>
                         </DataGrid>
                     </Border>
-                    <Border Grid.Row="4" Margin="0,5,10,0">
+                    <Border Grid.Row="4" Margin="0,0,10,0">
                         <Grid>
                             <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="3*"/>
+                                <ColumnDefinition Width="1.5*"/>
                                 <ColumnDefinition Width="*"/>
                                 <ColumnDefinition Width="*"/>
                             </Grid.ColumnDefinitions>
 
                             <TextBlock HorizontalAlignment="Center" Text="Output" Grid.Column="0" FontWeight="Bold" FontSize="15"/>
                             <Button Content="Add" Grid.Column="1"/>
-                            <Button Content="Sub" Grid.Column="2"/>
+                            <Button Content="Delete" Grid.Column="2"/>
                         </Grid>
                     </Border>
                     <Border BorderBrush="Gray" Grid.Row="5" BorderThickness="1" Margin="8,4,8,8">
@@ -182,8 +200,8 @@
                 </Grid>
             </Grid>
         </Border>
-        <Border Grid.Column="1" Grid.Row="0" Grid.RowSpan="2" Background="LightGreen">
-            
+        <Border Grid.Column="1" Grid.Row="0" Grid.RowSpan="2" Background="White">
+            <Image Source="{Binding BaseModelPicture}" Margin="80" UseLayoutRounding="True" RenderOptions.BitmapScalingMode="Unspecified"/>
         </Border>
         <!--<TextBlock Text="{Binding Message}"/>-->
     </Grid>

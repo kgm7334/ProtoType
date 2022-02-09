@@ -19,7 +19,23 @@
             <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
         <Border Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="2" BorderBrush="LightGray" BorderThickness="2">
-            <TextBlock HorizontalAlignment="Center" FontSize="20" Text="{Binding MainTitle}"/>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="200"/>
+                    <ColumnDefinition Width="25"/>
+                    <ColumnDefinition Width="25"/>
+                    <ColumnDefinition Width="10"/>
+                </Grid.ColumnDefinitions>
+                <TextBlock FontSize="20" Grid.Column="0" Text="{Binding MainTitle}"/>
+                <Border BorderThickness="1" BorderBrush="Gray" Grid.Column="1" Width="25">
+                    <Image Source="C:\\vms\\Images\\Import.png"  Stretch="Fill" />
+                </Border>
+                <Button Grid.Column="2">
+                    <Button.Content>
+                        <Image Source="{Binding FileIcon}" UseLayoutRounding="True" RenderOptions.BitmapScalingMode="Unspecified"/>
+                    </Button.Content>
+                </Button>
+            </Grid>
         </Border>
         <!--<ContentControl Grid.Row="0" Grid.ColumnSpan="2" prism:RegionManager.RegionName="HeaderRegion"/>-->
         <ContentControl Grid.Column="0" Grid.Row="1" prism:RegionManager.RegionName="MenuRegion"/>
