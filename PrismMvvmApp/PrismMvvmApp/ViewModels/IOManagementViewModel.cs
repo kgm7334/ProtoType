@@ -12,6 +12,7 @@ using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows;
 
 namespace PrismMvvmApp.ViewModels
 {
@@ -119,7 +120,7 @@ namespace PrismMvvmApp.ViewModels
         {
             if (IOCodeList != null)
             {
-
+                MessageBox.Show("선택된 모델을 삭제하시겠습니까?", "삭제", MessageBoxButton.YesNo);
             }
         }
 

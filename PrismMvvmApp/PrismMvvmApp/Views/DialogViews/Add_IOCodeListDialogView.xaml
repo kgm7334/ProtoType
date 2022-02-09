@@ -4,63 +4,67 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:PrismMvvmApp.Views"
-             mc:Ignorable="d" 
-             d:DesignHeight="180" d:DesignWidth="600">
+             mc:Ignorable="d" Width="360" Height="200"
+             d:DesignHeight="180" d:DesignWidth="300">
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Height="1*"/>
-            <RowDefinition Height="1*"/>
+            <RowDefinition Height="10"/>
+            <RowDefinition />
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="10"/>
         </Grid.RowDefinitions>
-        <Grid Grid.Row="0">
+        <Grid Grid.Row="1">
             <Grid.ColumnDefinitions>
-                <ColumnDefinition/>
-                <ColumnDefinition/>
+                <ColumnDefinition Width="10"/>
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition Width="10"/>
             </Grid.ColumnDefinitions>
             <Grid.RowDefinitions>
                 <RowDefinition/>
                 <RowDefinition/>
                 <RowDefinition/>
-                <RowDefinition/>
+                <RowDefinition Height="*"/>
                 <RowDefinition/>
             </Grid.RowDefinitions>
-            <Border Grid.Column="0" Grid.Row="0" BorderBrush="LightGray" BorderThickness="1">
-                <TextBlock Text="Group"/>    
-            </Border>
-            <Border Grid.Column="0" Grid.Row="1" BorderBrush="LightGray" BorderThickness="1">
-                <TextBlock Text="Name"/>    
-            </Border>
-            <Border Grid.Column="0" Grid.Row="2" BorderBrush="LightGray" BorderThickness="1">
-                <TextBlock Text="ID"/>
-            </Border>
-            <Border Grid.Column="0" Grid.Row="3" BorderBrush="LightGray" BorderThickness="1">
-                <TextBlock Text="Position"/>    
-            </Border>
-            <Border Grid.Column="0" Grid.Row="4" BorderBrush="LightGray" BorderThickness="1">
-                <TextBlock Text="DataType"/>
-            </Border>
             <Border Grid.Column="1" Grid.Row="0" BorderBrush="LightGray" BorderThickness="1">
-                <TextBlock Text="Group"/>
+                <TextBlock Text="Group" Margin="10,0,0,0"/>    
             </Border>
-            <Border Grid.Column="1" Grid.Row="1" BorderBrush="LightGray" BorderThickness="1">
-                <TextBlock Text="Name"/>
+            <Border Grid.Column="1" Grid.Row="1" BorderBrush="LightGray" BorderThickness="1" Margin="0,-1,0,0">
+                <TextBlock Text="Name"  Margin="10,0,0,0"/>    
             </Border>
-            <Border Grid.Column="1" Grid.Row="2" BorderBrush="LightGray" BorderThickness="1">
-                <TextBlock Text="ID"/>
+            <Border Grid.Column="1" Grid.Row="2" BorderBrush="LightGray" BorderThickness="1" Margin="0,-1,0,0">
+                <TextBlock Text="ID"  Margin="10,0,0,0"/>
             </Border>
-            <Border Grid.Column="1" Grid.Row="3" BorderBrush="LightGray" BorderThickness="1">
-                <TextBlock Text="Position"/>
+            <Border Grid.Column="1" Grid.Row="3" BorderBrush="LightGray" BorderThickness="1" Margin="0,-1,0,0">
+                <TextBlock Text="Position" Margin="10,0,0,0"/>    
             </Border>
-            <Border Grid.Column="1" Grid.Row="4" BorderBrush="LightGray" BorderThickness="1">
-                <TextBlock Text="DataType"/>
+            <Border Grid.Column="1" Grid.Row="4" BorderBrush="LightGray" BorderThickness="1" Margin="0,-1,0,0">
+                <TextBlock Text="DataType" Margin="10,0,0,0"/>
+            </Border>
+            <Border Grid.Column="2" Grid.Row="0" BorderBrush="LightGray" BorderThickness="1" Margin="-1,-1,0,0">
+                <ComboBox  Margin="1" ItemsSource="{Binding Groups}"/>
+            </Border>
+            <Border Grid.Column="2" Grid.Row="1" BorderBrush="LightGray" BorderThickness="1" Margin="-1,-1,0,0">
+                <TextBox  Margin="1"/>
+            </Border>
+            <Border Grid.Column="2" Grid.Row="2" BorderBrush="LightGray" BorderThickness="1" Margin="-1,-1,0,0">
+                <TextBox Margin="1"/>
+            </Border>
+            <Border Grid.Column="2" Grid.Row="3" BorderBrush="LightGray" BorderThickness="1" Margin="-1,-1,0,0">
+                <TextBox  Margin="1"/>
+            </Border>
+            <Border Grid.Column="2" Grid.Row="4" BorderBrush="LightGray" BorderThickness="1" Margin="-1,-1,0,0">
+                <ComboBox   Margin="1" ItemsSource="{Binding DataTypes}"/>
             </Border>
         </Grid>
-        <Grid Grid.Row="1">
+        <Grid Grid.Row="2">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition/>
                 <ColumnDefinition/>
             </Grid.ColumnDefinitions>
-            <Button Grid.Column="0" Content="OK"/>
-            <Button Grid.Column="1" Command="{Binding CloseDialogCommand}" CommandParameter="true"  Content="Cancel"/>
+            <Button Grid.Column="0" Content="OK" HorizontalAlignment="Right" VerticalAlignment="Center" Width="100" Height="28" Margin="0,0,5, 0"/>
+            <Button Grid.Column="1" Command="{Binding CloseDialogCommand}" HorizontalAlignment="Left" VerticalAlignment="Center" Width="100" Height="28" Margin="5,0,0,0" CommandParameter="true"  Content="Cancel"/>
         </Grid>
     </Grid>
 </UserControl>

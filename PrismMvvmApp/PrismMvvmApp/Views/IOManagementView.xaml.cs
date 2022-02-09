@@ -1,4 +1,5 @@
-﻿using System;
+﻿using PrismMvvmApp.ViewModels;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -23,6 +24,22 @@ namespace PrismMvvmApp.Views
         public IOManagementView()
         {
             InitializeComponent();
+        }
+
+        private void input_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        {
+            var vm = this.DataContext as IOManagementViewModel;
+            vm.ExcuteIOCodeListAdd();
+        }
+        private void modify_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        {
+            var vm = this.DataContext as IOManagementViewModel;
+            vm.ExcuteIOCodeListUpdate();
+        }
+        private void delete_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        {
+            var vm = this.DataContext as IOManagementViewModel;
+            vm.ExcuteIOCodeListRemove();
         }
     }
 }

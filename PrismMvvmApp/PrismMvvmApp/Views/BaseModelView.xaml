@@ -23,9 +23,9 @@
                         <Expander.Header>
                             <StackPanel Orientation="Horizontal">
                                 <TextBlock VerticalAlignment="Center" FontWeight="Bold">Nozzle</TextBlock>
-                                <Button Margin="5,0,0,0" Height="5" VerticalContentAlignment="Center" Background="LightSkyBlue">
+                                <Button Margin="25,0,0,0" Height="5" Background="LightSkyBlue" >
                                     <Button.Content>
-                                        <TextBlock FontWeight="Bold" FontSize="10" VerticalAlignment="Center" Text="+"/>
+                                        <TextBlock Text="+" />
                                     </Button.Content>
                                 </Button>
                             </StackPanel>
@@ -45,7 +45,7 @@
                         <Expander.Header>
                             <StackPanel Orientation="Horizontal">
                                 <TextBlock VerticalAlignment="Center" FontWeight="Bold">Sensor</TextBlock>
-                                <Button Margin="5,0,0,0" Height="5" VerticalContentAlignment="Center" Background="LightSkyBlue">
+                                <Button Margin="25,0,0,0" Height="5" VerticalContentAlignment="Center" Background="LightSkyBlue">
                                     <Button.Content>
                                         <TextBlock FontWeight="Bold" FontSize="10" VerticalAlignment="Center" Text="+"/>
                                     </Button.Content>
@@ -67,7 +67,7 @@
                         <Expander.Header>
                             <StackPanel Orientation="Horizontal">
                                 <TextBlock VerticalAlignment="Center" FontWeight="Bold">Valve</TextBlock>
-                                <Button Margin="5,0,0,0" Height="5" VerticalContentAlignment="Center" Background="LightSkyBlue">
+                                <Button Margin="25,0,0,0" Height="5" VerticalContentAlignment="Center" Background="LightSkyBlue">
                                     <Button.Content>
                                         <TextBlock FontWeight="Bold" FontSize="10" VerticalAlignment="Center" Text="+"/>
                                     </Button.Content>
@@ -89,7 +89,7 @@
                         <Expander.Header>
                             <StackPanel Orientation="Horizontal">
                                 <TextBlock VerticalAlignment="Center" FontWeight="Bold">Motor</TextBlock>
-                                <Button Margin="5,0,0,0" Height="5" VerticalContentAlignment="Center" Background="LightSkyBlue">
+                                <Button Margin="25,0,0,0" Height="5" VerticalContentAlignment="Center" Background="LightSkyBlue">
                                     <Button.Content>
                                         <TextBlock FontWeight="Bold" FontSize="10" VerticalAlignment="Center" Text="+"/>
                                     </Button.Content>
@@ -116,24 +116,29 @@
                 </Grid.ColumnDefinitions>
                 <Grid Grid.Column="1" Background="AliceBlue">
                     <Grid.RowDefinitions>
-                        <RowDefinition Height="30"/>
+                        <RowDefinition Height="24"/>
                         <RowDefinition Height="*"/>
-                        <RowDefinition Height="30"/>
+                        <RowDefinition Height="24"/>
                         <RowDefinition Height="*"/>
-                        <RowDefinition Height="30"/>
+                        <RowDefinition Height="24"/>
                         <RowDefinition Height="*"/>
                     </Grid.RowDefinitions>
                     <Border Grid.Row="0" Margin="0,0,10,0">
                         <Grid>
                             <Grid.ColumnDefinitions>
                                 <ColumnDefinition Width="1.5*"/>
-                                <ColumnDefinition Width="*"/>
-                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="25"/>
+                                <ColumnDefinition Width="2"/>
+                                <ColumnDefinition Width="25"/>
                             </Grid.ColumnDefinitions>
 
-                            <TextBlock HorizontalAlignment="Center" Text="Input" Grid.Column="0" FontWeight="Bold" FontSize="15"/>
-                            <Button Content="Add" Grid.Column="1"/>
-                            <Button Content="Delete" Grid.Column="2"/>
+                            <TextBlock HorizontalAlignment="Left" Margin="10,0,0,0" Text="Input" Grid.Column="0" FontWeight="Bold" FontSize="15"/>
+                            <Border BorderThickness="1" BorderBrush="Gray" Grid.Column="1" >
+                                <Image Source="C:\\vms\\Images\\Add.ico"  Stretch="Fill" Margin="3" ToolTip="Import"/>
+                            </Border>
+                            <Border BorderThickness="1" BorderBrush="Gray" Grid.Column="3" >
+                                <Image Source="C:\\vms\\Images\\delete.ico"  Stretch="Fill" Margin="3" ToolTip="Import"/>
+                            </Border>
                         </Grid>
                     </Border>
                     <Border BorderBrush="Gray" Grid.Row="1" BorderThickness="1" Margin="8,4,8,8">
@@ -151,13 +156,19 @@
                         <Grid>
                             <Grid.ColumnDefinitions>
                                 <ColumnDefinition Width="1.5*"/>
-                                <ColumnDefinition Width="*"/>
-                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="25"/>
+                                <ColumnDefinition Width="2"/>
+                                <ColumnDefinition Width="25"/>
                             </Grid.ColumnDefinitions>
 
-                            <TextBlock HorizontalAlignment="Center" Text="Parameter" Grid.Column="0" FontWeight="Bold" FontSize="15"/>
-                            <Button Content="Add" Grid.Column="1"/>
-                            <Button Content="Delete" Grid.Column="2"/>
+                            <TextBlock Text="Parameter" HorizontalAlignment="Left" Margin="10,0,0,0" Grid.Column="0" FontWeight="Bold" FontSize="15"/>
+
+                            <Border BorderThickness="1" BorderBrush="Gray" Grid.Column="1">
+                                <Image Source="C:\\vms\\Images\\Add.ico"  Stretch="Fill" Margin="3" ToolTip="Add"/>
+                            </Border>
+                            <Border BorderThickness="1" BorderBrush="Gray" Grid.Column="3" >
+                                <Image Source="C:\\vms\\Images\\delete.ico"  Stretch="Fill" Margin="3" ToolTip="Delete"/>
+                            </Border>
                         </Grid>
                     </Border>
                     <Border BorderBrush="Gray" Grid.Row="3" BorderThickness="1" Margin="8,4,8,8">
@@ -175,13 +186,18 @@
                         <Grid>
                             <Grid.ColumnDefinitions>
                                 <ColumnDefinition Width="1.5*"/>
-                                <ColumnDefinition Width="*"/>
-                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="25"/>
+                                <ColumnDefinition Width="2"/>
+                                <ColumnDefinition Width="25"/>
                             </Grid.ColumnDefinitions>
 
-                            <TextBlock HorizontalAlignment="Center" Text="Output" Grid.Column="0" FontWeight="Bold" FontSize="15"/>
-                            <Button Content="Add" Grid.Column="1"/>
-                            <Button Content="Delete" Grid.Column="2"/>
+                            <TextBlock HorizontalAlignment="Left" Margin="10,0,0,0" Text="Output" Grid.Column="0" FontWeight="Bold" FontSize="15"/>
+                            <Border BorderThickness="1" BorderBrush="Gray" Grid.Column="1">
+                                <Image Source="C:\\vms\\Images\\Add.ico"  Stretch="Fill" Margin="3" ToolTip="Add"/>
+                            </Border>
+                            <Border BorderThickness="1" BorderBrush="Gray" Grid.Column="3" >
+                                <Image Source="C:\\vms\\Images\\delete.ico"  Stretch="Fill" Margin="3" ToolTip="Delete"/>
+                            </Border>
                         </Grid>
                     </Border>
                     <Border BorderBrush="Gray" Grid.Row="5" BorderThickness="1" Margin="8,4,8,8">
