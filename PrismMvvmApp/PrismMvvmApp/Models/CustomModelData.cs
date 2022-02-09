@@ -12,65 +12,26 @@ using System.Windows;
 
 namespace PrismMvvmApp.Models
 {
-    public class CustomModelData : BindableBase
+    public class ModelDataNode : BaseModelData
     {
-        public CustomModelData(string group, int id, string name, Point position, Size size, enDataType type)
+        public ModelDataNode(string group, int id, string name, Point position, Size size, int parentId, int childId)
+            :base(id, name, position, size, group)
         {
-            ModelID = id;
-            Name = name;
-            Position = position;
-            DataType = type;
-        }
-        private enDataType _datatype;
-        public enDataType DataType
-        {
-            get { return _datatype; }
-            set { SetProperty(ref _datatype, value); }
-        }
-        private int _modelId;
-        public int ModelID
-        {
-            get { return _modelId; }
-            set { SetProperty(ref _modelId, value); }
+            ParentID = parentId;
+            ChildID = childId;
         }
 
-        private string _name;
-        public string Name
+        private int _parentId;
+        public int ParentID
         {
-            get { return _name; }
-            set { SetProperty(ref _name, value); }
+            get { return _parentId; }
+            set { SetProperty(ref _parentId, value); }
         }
-
-
-        private Point _position;
-        public Point Position
+        private int _childId;
+        public int ChildID
         {
-            get { return _position; }
-            set { SetProperty(ref _position, value); }
-        }
-        private Size _size;
-        public Size Size
-        {
-            get { return _size; }
-            set { SetProperty(ref _size, value); }
-        }
-        private ObservableCollection<IOCodeSource> _inputs;
-        public ObservableCollection<IOCodeSource> Inputs
-        {
-            get { return _inputs; }
-            set { SetProperty(ref _inputs, value); }
-        }
-        private ObservableCollection<IOCodeSource> _outputs;
-        public ObservableCollection<IOCodeSource> Outputs
-        {
-            get { return _outputs; }
-            set { SetProperty(ref _outputs, value); }
-        }
-        private ObservableCollection<IOCodeSource> _parameters;
-        public ObservableCollection<IOCodeSource> Parameters
-        {
-            get { return _parameters; }
-            set { SetProperty(ref _parameters, value); }
+            get { return _childId; }
+            set { SetProperty(ref _childId, value); }
         }
     }
 }

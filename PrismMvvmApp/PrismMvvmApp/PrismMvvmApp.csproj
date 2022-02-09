@@ -93,6 +93,7 @@
     <Compile Include="Models\CustomModelData.cs" />
     <Compile Include="Models\enDataType.cs" />
     <Compile Include="Models\BaseModelData.cs" />
+    <Compile Include="Models\ModelIOParam.cs" />
     <Compile Include="Models\IOCodeSource.cs" />
     <Compile Include="ViewModels\BaseModelViewModel.cs" />
     <Compile Include="ViewModels\CustomModelViewModel.cs" />
