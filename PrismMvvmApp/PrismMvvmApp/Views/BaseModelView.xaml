@@ -239,10 +239,10 @@
 
                             <TextBlock HorizontalAlignment="Left" Margin="10,0,0,0" Text="Input" Grid.Column="0" FontWeight="Bold" FontSize="15"/>
                             <Border BorderThickness="1" BorderBrush="Gray" Grid.Column="1" >
-                                <Image Source="C:\\vms\\Images\\Add.ico"  Stretch="Fill" Margin="3" ToolTip="Import"/>
+                                <Image Source="C:\\vms\\Images\\Add.ico"  Stretch="Fill" Margin="3" ToolTip="Add"/>
                             </Border>
                             <Border BorderThickness="1" BorderBrush="Gray" Grid.Column="3" >
-                                <Image Source="C:\\vms\\Images\\delete.ico"  Stretch="Fill" Margin="3" ToolTip="Import"/>
+                                <Image Source="C:\\vms\\Images\\delete.ico"  Stretch="Fill" Margin="3" ToolTip="Delete"/>
                             </Border>
                         </Grid>
                     </Border>
