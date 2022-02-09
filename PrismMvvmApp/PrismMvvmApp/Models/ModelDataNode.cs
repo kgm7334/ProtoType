@@ -17,7 +17,7 @@ namespace PrismMvvmApp.Models
         public ModelDataNode()
             :base()
         {
-
+           
         }
 
         public ModelDataNode(string group, int id, string name, Point position, Size size, int parentId, int childId)
@@ -39,5 +39,6 @@ namespace PrismMvvmApp.Models
             get { return _childId; }
             set { SetProperty(ref _childId, value); }
         }
+      
     }
 }

@@ -52,6 +52,11 @@ namespace PrismMvvmApp.DAO
             return _dataProvider.LoadParameterCode();
         }
 
+        public ObservableCollection<ModelDataNode> LoadUnits(string unitName)
+        {
+            return _dataProvider.LoadUnits(unitName);
+        }
+
         public ModelDataNode SearchBaseModel(string modelName)
         {
             return _dataProvider.SearchBaseModel(modelName);

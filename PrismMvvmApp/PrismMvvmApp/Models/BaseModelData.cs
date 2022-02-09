@@ -16,6 +16,9 @@ namespace PrismMvvmApp.Models
     {
         public BaseModelData()
         {
+            Inputs = new ObservableCollection<ModelIOParam>();
+            Outputs = new ObservableCollection<ModelIOParam>();
+            Parameters = new ObservableCollection<ModelIOParam>();
         }
         public BaseModelData( int modelId, string name, Point offset,  Size size, string group)
         {

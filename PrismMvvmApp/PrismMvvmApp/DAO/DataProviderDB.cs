@@ -45,6 +45,11 @@ namespace PrismMvvmApp.DAO
             throw new NotImplementedException();
         }
 
+        public ObservableCollection<ModelDataNode> LoadUnits(string unitName)
+        {
+            throw new NotImplementedException();
+        }
+
         public ModelDataNode SearchBaseModel(string modelName)
         {
             throw new NotImplementedException();

@@ -6,6 +6,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows;
 
@@ -16,6 +17,12 @@ namespace PrismMvvmApp.Models
         public ModelIOParam(enIOParamType ioParamType, int index, Point offset, string group, int id, string name, int position, enDataType type )
             :base(group, id, name, position, type)
         {
+            //var randnum = new Random();
+            if(name.Contains("output"))
+                Value = (DateTime.Now.Millisecond % 3 == 0 ? "Success": (DateTime.Now.Millisecond % 3 == 1 ? "Failed" : "Marking"));
+            else
+                Value =DateTime.Now.Millisecond.ToString();
+            Thread.Sleep(10);
             Index = index;
             Offset = offset;
         }
@@ -38,6 +45,13 @@ namespace PrismMvvmApp.Models
         {
             get { return _offset; }
             set { SetProperty(ref _offset, value); }
+        }
+
+        private string _value;
+        public string Value
+        {
+            get { return _value; }
+            set { SetProperty(ref _value, value); }
         }
     }
 }

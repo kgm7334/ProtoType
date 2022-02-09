@@ -151,7 +151,6 @@ namespace PrismMvvmApp.DAO
                 case "N2":
                 case "S1":
                 case "S2":
-                case "V2":
                 case "M1":
                     return GetIOParamsForModel(LoadParameterCode(), group, 1);
                 case "N4":
@@ -161,6 +160,7 @@ namespace PrismMvvmApp.DAO
                 case "V1":
                 case "M3":
                 case "V4":
+                case "V2":
                     return GetIOParamsForModel(LoadParameterCode(), group, 4);
            
             }
@@ -169,6 +169,7 @@ namespace PrismMvvmApp.DAO
 
         public ModelDataNode SearchBaseModel(string modelName)
         {
+        
             return new ModelDataNode()
             {
                 Group = GetModelGroup(modelName),
@@ -210,6 +211,55 @@ namespace PrismMvvmApp.DAO
                 }
                 result.Add(new ModelIOParam(enIOParamType.Parameter, no++, new System.Windows.Point(24 + (i + 1) * 8, 0), target.Group, target.ID, target.Name, target.Position, target.DataType));
             }
+            return result;
+        }
+
+        public ObservableCollection<ModelDataNode> LoadUnits(string unitName)
+        {
+            var result = new ObservableCollection<ModelDataNode>();
+            var data = SearchBaseModel("V2");
+            data.ModelID = 1;
+            result.Add(data);
+            data = new ModelDataNode();
+            data.ModelID = 3;
+            data.Name = "CustomModel1";
+            result.Add(data);
+            data = SearchBaseModel("V4");
+            data.ModelID = 3;
+            result.Add(data);
+            data = new ModelDataNode();
+            data.ModelID = 4;
+            data.Name = "CustomModel2";
+            //data.Inputs.AddRange(GetIOParamsForModel(LoadInputCode(), "Sensor", 2));
+            //data.Inputs.AddRange(GetIOParamsForModel(LoadInputCode(), "Sensor", 1));
+            //data.Parameters.AddRange(GetIOParamsForModel(LoadParameterCode(), "Sensor", 2));
+            //data.Parameters.AddRange(GetIOParamsForModel(LoadParameterCode(), "Nozzle", 1));
+            //data.Parameters.AddRange(GetIOParamsForModel(LoadParameterCode(), "Valve", 1));
+            //data.Outputs.AddRange(GetIOParamsForModel(LoadOutputCode(), "Motor", 1));
+            result.Add(data);
+            data = new ModelDataNode();
+            data.ModelID = 5;
+            data.Name = "N4";
+            result.Add(data);
+            data = new ModelDataNode();
+            data.ModelID = 6;
+            data.Name = "CustomModel2";
+            data.ModelID = 7;
+            data.Name = "M2";
+            result.Add(data);
+            data = new ModelDataNode();
+            data.ModelID = 8;
+            data.Name = "M2";
+            result.Add(data);
+            data = new ModelDataNode();
+            data.ModelID = 9;
+            data.Name = "V3";
+            result.Add(data);
+            data = new ModelDataNode();
+            data.ModelID = 10;
+            data.Name = "S3";
+            result.Add(data);
+
             return result;
         }
     }

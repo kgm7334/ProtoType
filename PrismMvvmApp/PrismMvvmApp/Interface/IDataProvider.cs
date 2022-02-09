@@ -17,5 +17,6 @@ namespace PrismMvvmApp.Interface
         ObservableCollection<ModelIOParam> LoadModelOutputs(string modelName);
         ObservableCollection<ModelIOParam> LoadModelParameters(string modelName);
         ModelDataNode SearchBaseModel(string modelName);
+        ObservableCollection<ModelDataNode> LoadUnits(string unitName);
     }
 }

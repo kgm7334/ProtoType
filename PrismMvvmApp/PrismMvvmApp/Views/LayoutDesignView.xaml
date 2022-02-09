@@ -9,17 +9,19 @@
     <Grid ShowGridLines="False">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="220"/>
-            <ColumnDefinition Width="3*"/>
-            <ColumnDefinition Width="2*"/>
+            <ColumnDefinition/>
+            <ColumnDefinition Width="240"/>
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
             <RowDefinition/>
             <RowDefinition Height="30*"/>
+            <RowDefinition Height="200"/>
         </Grid.RowDefinitions>
-        <Border Grid.Column="0" Grid.Row="0" Grid.RowSpan="2">
+        <Border Grid.Column="0" Grid.Row="0" Grid.RowSpan="3">
             <Grid>
                 <Grid.RowDefinitions>
-                    <RowDefinition Height="0.5*"/>
+                    <RowDefinition Height="100"/>
+                    <RowDefinition Height="200"/>
                     <RowDefinition Height="35"/>
                     <RowDefinition/>
                 </Grid.RowDefinitions>
@@ -28,7 +30,7 @@
                         <Expander Width="auto" Background="White" ExpandDirection="Down" IsExpanded="true">
                             <Expander.Header>
                                 <StackPanel Orientation="Horizontal">
-                                    <TextBlock VerticalAlignment="Center" Foreground="White" FontWeight="Bold">Custom</TextBlock>
+                                    <TextBlock VerticalAlignment="Center" Foreground="White" FontWeight="Bold">Unit</TextBlock>
                                     <Button Margin="102,0,0,0" Width="34" VerticalContentAlignment="Center" Background="LightSkyBlue">
                                         <Button.Content>
                                             <Image Source="C:\\vms\\Images\\Add.ico"  Stretch="Fill" />
@@ -40,15 +42,7 @@
                                 <Grid>
                                     <StackPanel>
                                         <StackPanel Orientation="Horizontal">
-                                            <Button Content="Custom Model 1" Width="160" Command="{Binding CustomModelGetPictureCommand}" CommandParameter="CustomModel1.png"/>
-                                            <Button Margin="5,0,0,0"  Width="30" VerticalContentAlignment="Center" Background="White">
-                                                <Button.Content>
-                                                    <Image Source="C:\\vms\\Images\\Delete.ico"  Stretch="Fill" />
-                                                </Button.Content>
-                                            </Button>
-                                        </StackPanel>
-                                        <StackPanel Orientation="Horizontal">
-                                            <Button Content="Custom Model 2" Width="160" Command="{Binding CustomModelGetPictureCommand}" CommandParameter="CustomModel.png"/>
+                                            <Button Content="Unit 1" Width="160" Command="{Binding CustomModelGetPictureCommand}" CommandParameter="CustomModel1.png"/>
                                             <Button Margin="5,0,0,0"  Width="30" VerticalContentAlignment="Center" Background="White">
                                                 <Button.Content>
                                                     <Image Source="C:\\vms\\Images\\Delete.ico"  Stretch="Fill" />
@@ -61,8 +55,31 @@
                         </Expander>
                     </StackPanel>
                 </ScrollViewer>
-                <TextBlock Text="BaseModel" HorizontalAlignment="Center" FontSize="25" Foreground="SkyBlue" Grid.Row="1"/>
-                <ScrollViewer Grid.Row="2">
+                <ScrollViewer Grid.Row="1">
+                    <StackPanel ScrollViewer.CanContentScroll="True" ScrollViewer.VerticalScrollBarVisibility="Visible">
+                        <Expander Width="auto" Background="White" ExpandDirection="Down" IsExpanded="true">
+                            <Expander.Header>
+                                <StackPanel Orientation="Horizontal">
+                                    <TextBlock VerticalAlignment="Center" Foreground="White" FontWeight="Bold">Custom Model</TextBlock>
+                                </StackPanel>
+                            </Expander.Header>
+                            <Expander.Content>
+                                <Grid>
+                                    <StackPanel>
+                                        <StackPanel Orientation="Horizontal">
+                                            <Image Source="C:\\vms\\Images\\CM1.tif" Margin="20,0,0,0" ToolTip="CoustomModel1" Height="80" Width="150" Stretch="Fill" />
+                                        </StackPanel>
+                                        <StackPanel Orientation="Horizontal">
+                                            <Image Source="C:\\vms\\Images\\CM2.tif" Margin="20,0,0,0" ToolTip="CustomModel2" Height="80" Width="150" Stretch="Fill" />
+                                        </StackPanel>
+                                    </StackPanel>
+                                </Grid>
+                            </Expander.Content>
+                        </Expander>
+                    </StackPanel>
+                </ScrollViewer>
+                <TextBlock Text="BaseModel" HorizontalAlignment="Center" FontSize="25" Foreground="SkyBlue" Grid.Row="2"/>
+                <ScrollViewer Grid.Row="3">
                     <StackPanel ScrollViewer.CanContentScroll="True" ScrollViewer.VerticalScrollBarVisibility="Visible">
                         <Expander Width="auto" Background="White" ExpandDirection="Down" IsExpanded="true">
                             <Expander.Header>
@@ -74,16 +91,16 @@
                                 <Grid>
                                     <StackPanel>
                                         <StackPanel Orientation="Horizontal">
-                                            <Image Source="C:\\vms\\Images\\N1_S.tif" Margin="30,0,0,0" ToolTip="N1" Height="32" Width="60" Stretch="Fill" />
+                                            <Image Source="C:\\vms\\Images\\N1.tif" Margin="30,0,0,0" ToolTip="N1" Height="32" Width="54" Stretch="Fill" />
                                         </StackPanel>
                                         <StackPanel Orientation="Horizontal">
-                                            <Image Source="C:\\vms\\Images\\N2.png" Margin="30,0,0,0" ToolTip="N2" Height="32" Width="60" Stretch="Fill" />
+                                            <Image Source="C:\\vms\\Images\\N2.tif" Margin="30,0,0,0" ToolTip="N2" Height="32" Width="60" Stretch="Fill" />
                                         </StackPanel>
                                         <StackPanel Orientation="Horizontal">
-                                            <Image Source="C:\\vms\\Images\\N3.png" Margin="30,0,0,0" ToolTip="N3" Height="32" Width="60" Stretch="Fill" />
+                                            <Image Source="C:\\vms\\Images\\N3.tif" Margin="30,0,0,0" ToolTip="N3" Height="32" Width="60" Stretch="Fill" />
                                         </StackPanel>
                                         <StackPanel Orientation="Horizontal">
-                                            <Image Source="C:\\vms\\Images\\N4.png" Margin="30,0,0,0" ToolTip="N4" Height="32" Width="60" Stretch="Fill" />
+                                            <Image Source="C:\\vms\\Images\\N4.tif" Margin="30,0,0,0" ToolTip="N4" Height="32" Width="60" Stretch="Fill" />
                                         </StackPanel>
                                     </StackPanel>
                                 </Grid>
@@ -99,16 +116,16 @@
                                 <Grid>
                                     <StackPanel>
                                         <StackPanel Orientation="Horizontal">
-                                            <Image Source="C:\\vms\\Images\\S1.png" Margin="30,0,0,0" ToolTip="S1" Height="32" Width="60" Stretch="Fill" />
+                                            <Image Source="C:\\vms\\Images\\S1.tif" Margin="30,0,0,0" ToolTip="S1" Height="32" Width="60" Stretch="Fill" />
                                         </StackPanel>
                                         <StackPanel Orientation="Horizontal">
-                                            <Image Source="C:\\vms\\Images\\S2.png" Margin="30,0,0,0" ToolTip="S2" Height="32" Width="60" Stretch="Fill" />
+                                            <Image Source="C:\\vms\\Images\\S2.tif" Margin="30,0,0,0" ToolTip="S2" Height="32" Width="60" Stretch="Fill" />
                                         </StackPanel>
                                         <StackPanel Orientation="Horizontal">
-                                            <Image Source="C:\\vms\\Images\\S3.png" Margin="30,0,0,0" ToolTip="S3" Height="32" Width="60" Stretch="Fill" />
+                                            <Image Source="C:\\vms\\Images\\S3.tif" Margin="30,0,0,0" ToolTip="S3" Height="32" Width="60" Stretch="Fill" />
                                         </StackPanel>
                                         <StackPanel Orientation="Horizontal">
-                                            <Image Source="C:\\vms\\Images\\S4.png" Margin="30,0,0,0" ToolTip="S4" Height="32" Width="60" Stretch="Fill" />
+                                            <Image Source="C:\\vms\\Images\\S4.tif" Margin="30,0,0,0" ToolTip="S4" Height="32" Width="60" Stretch="Fill" />
                                         </StackPanel>
                                     </StackPanel>
                                 </Grid>
@@ -124,16 +141,16 @@
                                 <Grid>
                                     <StackPanel>
                                         <StackPanel Orientation="Horizontal">
-                                            <Image Source="C:\\vms\\Images\\V1.png" Margin="30,0,0,0" ToolTip="V1" Height="32" Width="60" Stretch="Fill" />
+                                            <Image Source="C:\\vms\\Images\\V1.tif" Margin="30,0,0,0" ToolTip="V1" Height="32" Width="60" Stretch="Fill" />
                                         </StackPanel>
                                         <StackPanel Orientation="Horizontal">
-                                            <Image Source="C:\\vms\\Images\\V2.png" Margin="30,0,0,0" ToolTip="V2" Height="32" Width="60" Stretch="Fill" />
+                                            <Image Source="C:\\vms\\Images\\V2.tif" Margin="30,0,0,0" ToolTip="V2" Height="32" Width="60" Stretch="Fill" />
                                         </StackPanel>
                                         <StackPanel Orientation="Horizontal">
-                                            <Image Source="C:\\vms\\Images\\V3.png" Margin="30,0,0,0" ToolTip="V3" Height="32" Width="60" Stretch="Fill" />
+                                            <Image Source="C:\\vms\\Images\\V3.tif" Margin="30,0,0,0" ToolTip="V3" Height="32" Width="60" Stretch="Fill" />
                                         </StackPanel>
                                         <StackPanel Orientation="Horizontal">
-                                            <Image Source="C:\\vms\\Images\\V4.png" Margin="30,0,0,0" ToolTip="V4" Height="32" Width="60" Stretch="Fill" />
+                                            <Image Source="C:\\vms\\Images\\V4.tif" Margin="30,0,0,0" ToolTip="V4" Height="32" Width="60" Stretch="Fill" />
                                         </StackPanel>
                                     </StackPanel>
                                 </Grid>
@@ -149,13 +166,13 @@
                                 <Grid>
                                     <StackPanel>
                                         <StackPanel Orientation="Horizontal">
-                                            <Image Source="C:\\vms\\Images\\M1.png" Margin="30,0,0,0" ToolTip="M1" Height="32" Width="60" Stretch="Fill" />
+                                            <Image Source="C:\\vms\\Images\\M1.tif" Margin="30,0,0,0" ToolTip="M1" Height="32" Width="60" Stretch="Fill" />
                                         </StackPanel>
                                         <StackPanel Orientation="Horizontal">
-                                            <Image Source="C:\\vms\\Images\\M2.png" Margin="30,0,0,0" ToolTip="M2" Height="32" Width="60" Stretch="Fill" />
+                                            <Image Source="C:\\vms\\Images\\M2.tif" Margin="30,0,0,0" ToolTip="M2" Height="32" Width="60" Stretch="Fill" />
                                         </StackPanel>
                                         <StackPanel Orientation="Horizontal">
-                                            <Image Source="C:\\vms\\Images\\M3.png" Margin="30,0,0,0" ToolTip="M3" Height="32" Width="60" Stretch="Fill" />
+                                            <Image Source="C:\\vms\\Images\\M3.tif" Margin="30,0,0,0" ToolTip="M3" Height="32" Width="60" Stretch="Fill" />
                                         </StackPanel>
                                     </StackPanel>
                                 </Grid>
@@ -165,19 +182,13 @@
                 </ScrollViewer>
             </Grid>
         </Border>
-        <Border Grid.Column="2" Grid.Row="1" Background="AliceBlue">
+        <Border Grid.Column="2" Grid.RowSpan="2" Grid.Row="1" Background="AliceBlue">
             <Grid>
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition/>
                 </Grid.ColumnDefinitions>
                 <Grid Grid.Column="1" Background="AliceBlue">
                     <Grid.RowDefinitions>
-                        <RowDefinition Height="24"/>
-                        <RowDefinition Height="*"/>
-                        <RowDefinition Height="24"/>
-                        <RowDefinition Height="*"/>
-                        <RowDefinition Height="24"/>
-                        <RowDefinition Height="*"/>
                         <RowDefinition Height="24"/>
                         <RowDefinition Height="*"/>
                     </Grid.RowDefinitions>
@@ -193,18 +204,13 @@
                             </Grid.ColumnDefinitions>
 
                             <TextBlock HorizontalAlignment="Left" Margin="10,0,0,0" Text="ModelList" Grid.Column="0" FontWeight="Bold" FontSize="15"/>
-                            <Border BorderThickness="1" BorderBrush="Gray" Grid.Column="1" >
-                                <Image Source="C:\\vms\\Images\\Add.ico"  Stretch="Fill" Margin="3" ToolTip="Add"/>
-                            </Border>
-                            <Border BorderThickness="1" BorderBrush="Gray" Grid.Column="3" >
-                                <Image Source="C:\\vms\\Images\\delete.ico"  Stretch="Fill" Margin="3" ToolTip="Delete"/>
-                            </Border>
+
                             <Border BorderThickness="1" BorderBrush="Gray" Grid.Column="5" >
-                                <Image Source="C:\\vms\\Images\\Modify.png"  Stretch="Fill" Margin="3" ToolTip="Update"/>
+                                <Image Source="C:\\vms\\Images\\delete.ico"  Stretch="Fill" Margin="3" ToolTip="Delete"/>
                             </Border>
                         </Grid>
                     </Border>
-                    <Border BorderBrush="Gray" Grid.Row="1" BorderThickness="1" Margin="8,4,8,8">
+                    <Border BorderBrush="Gray" Grid.Row="1" BorderThickness="1" Margin="8,4,8,4">
                         <DataGrid ItemsSource="{Binding IOCodeList}" AutoGenerateColumns="False" >
                             <DataGrid.Columns>
                                 <DataGridTextColumn Header="ID" Binding="{Binding ID}" Width="40"/>
@@ -213,118 +219,62 @@
                             </DataGrid.Columns>
                         </DataGrid>
                     </Border>
-                    <Border Grid.Row="2" Margin="0,0,10,0">
-                        <Grid>
-                            <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="1.5*"/>
-                                <ColumnDefinition Width="25"/>
-                                <ColumnDefinition Width="2"/>
-                                <ColumnDefinition Width="25"/>
-                                <ColumnDefinition Width="2"/>
-                                <ColumnDefinition Width="25"/>
-                            </Grid.ColumnDefinitions>
-
-                            <TextBlock Text="Input" HorizontalAlignment="Left" Margin="10,0,0,0" Grid.Column="0" FontWeight="Bold" FontSize="15"/>
-
-                            <Border BorderThickness="1" BorderBrush="Gray" Grid.Column="1" >
-                                <Image Source="C:\\vms\\Images\\Add.ico"  Stretch="Fill" Margin="3" ToolTip="Add"/>
-                            </Border>
-                            <Border BorderThickness="1" BorderBrush="Gray" Grid.Column="3" >
-                                <Image Source="C:\\vms\\Images\\delete.ico"  Stretch="Fill" Margin="3" ToolTip="Delete"/>
-                            </Border>
-                            <Border BorderThickness="1" BorderBrush="Gray" Grid.Column="5" >
-                                <Image Source="C:\\vms\\Images\\Modify.png"  Stretch="Fill" Margin="3" ToolTip="Update"/>
-                            </Border>
-                        </Grid>
-                    </Border>
-                    <Border BorderBrush="Gray" Grid.Row="3" BorderThickness="1" Margin="8,4,8,8">
-                        <DataGrid ItemsSource="{Binding IOCodeList}" AutoGenerateColumns="False" >
-                            <DataGrid.Columns>
-                                <DataGridTextColumn Header="ID" Binding="{Binding ID}" Width="40"/>
-                                <DataGridTextColumn Header="Group" Binding="{Binding Group}" Width="*"/>
-                                <DataGridTextColumn Header="Name" Binding="{Binding Name}" Width="*"/>
-                                <DataGridTextColumn Header="Position" Binding="{Binding Position}" Width="*"/>
-                                <DataGridTextColumn Header="Type" Binding="{Binding DataType}" Width="50"/>
-                            </DataGrid.Columns>
-                        </DataGrid>
-                    </Border>
-                    <Border Grid.Row="4" Margin="0,0,10,0">
-                        <Grid>
-                            <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="1.5*"/>
-                                <ColumnDefinition Width="25"/>
-                                <ColumnDefinition Width="2"/>
-                                <ColumnDefinition Width="25"/>
-                                <ColumnDefinition Width="2"/>
-                                <ColumnDefinition Width="25"/>
-                            </Grid.ColumnDefinitions>
-
-                            <TextBlock HorizontalAlignment="Left" Margin="10,0,0,0" Text="Parameter" Grid.Column="0" FontWeight="Bold" FontSize="15"/>
-                            <Border BorderThickness="1" BorderBrush="Gray" Grid.Column="1" >
-                                <Image Source="C:\\vms\\Images\\Add.ico"  Stretch="Fill" Margin="3" ToolTip="Add"/>
-                            </Border>
-                            <Border BorderThickness="1" BorderBrush="Gray" Grid.Column="3" >
-                                <Image Source="C:\\vms\\Images\\delete.ico"  Stretch="Fill" Margin="3" ToolTip="Delete"/>
-                            </Border>
-                            <Border BorderThickness="1" BorderBrush="Gray" Grid.Column="5" >
-                                <Image Source="C:\\vms\\Images\\Modify.png"  Stretch="Fill" Margin="3" ToolTip="Update"/>
-                            </Border>
-                        </Grid>
-                    </Border>
-                    <Border BorderBrush="Gray" Grid.Row="5" BorderThickness="1" Margin="8,4,8,8">
-                        <DataGrid ItemsSource="{Binding IOCodeList}" AutoGenerateColumns="False" >
-                            <DataGrid.Columns>
-                                <DataGridTextColumn Header="ID" Binding="{Binding ID}" Width="40"/>
-                                <DataGridTextColumn Header="Group" Binding="{Binding Group}" Width="*"/>
-                                <DataGridTextColumn Header="Name" Binding="{Binding Name}" Width="*"/>
-                                <DataGridTextColumn Header="Position" Binding="{Binding Position}" Width="*"/>
-                                <DataGridTextColumn Header="Type" Binding="{Binding DataType}" Width="50"/>
-                            </DataGrid.Columns>
-                        </DataGrid>
-                    </Border>
-                    <Border Grid.Row="6" Margin="0,0,10,0">
-                        <Grid>
-                            <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="1.5*"/>
-                                <ColumnDefinition Width="25"/>
-                                <ColumnDefinition Width="2"/>
-                                <ColumnDefinition Width="25"/>
-                                <ColumnDefinition Width="2"/>
-                                <ColumnDefinition Width="25"/>
-                            </Grid.ColumnDefinitions>
-
-                            <TextBlock HorizontalAlignment="Left" Margin="10,0,0,0" Text="Output" Grid.Column="0" FontWeight="Bold" FontSize="15"/>
-                            <Border BorderThickness="1" BorderBrush="Gray" Grid.Column="1" >
-                                <Image Source="C:\\vms\\Images\\Add.ico"  Stretch="Fill" Margin="3" ToolTip="Add"/>
-                            </Border>
-                            <Border BorderThickness="1" BorderBrush="Gray" Grid.Column="3" >
-                                <Image Source="C:\\vms\\Images\\delete.ico"  Stretch="Fill" Margin="3" ToolTip="Delete"/>
-                            </Border>
-                            <Border BorderThickness="1" BorderBrush="Gray" Grid.Column="5" >
-                                <Image Source="C:\\vms\\Images\\Modify.png"  Stretch="Fill" Margin="3" ToolTip="Update"/>
-                            </Border>
-                        </Grid>
-                    </Border>
-                    <Border BorderBrush="Gray" Grid.Row="7" BorderThickness="1" Margin="8,4,8,8">
-                        <DataGrid ItemsSource="{Binding IOCodeList}" AutoGenerateColumns="False" >
-                            <DataGrid.Columns>
-                                <DataGridTextColumn Header="ID" Binding="{Binding ID}" Width="40"/>
-                                <DataGridTextColumn Header="Group" Binding="{Binding Group}" Width="*"/>
-                                <DataGridTextColumn Header="Name" Binding="{Binding Name}" Width="*"/>
-                                <DataGridTextColumn Header="Position" Binding="{Binding Position}" Width="*"/>
-                                <DataGridTextColumn Header="Type" Binding="{Binding DataType}" Width="50"/>
-                            </DataGrid.Columns>
-                        </DataGrid>
-                    </Border>
+              
 
                 </Grid>
             </Grid>
         </Border>
-        <Border Grid.Column="1" Grid.Row="0" Grid.RowSpan="2" Background="White">
-            <Image Source="{Binding BaseModelPicture}" Margin="80" UseLayoutRounding="True" RenderOptions.BitmapScalingMode="Unspecified"/>
+        <Border Grid.Column="1" Grid.Row="1" BorderBrush="Gray" Margin="8,0,0,8" BorderThickness="1">
+            <Image Source="C:\\vms\\Images\\layout1.png" Stretch="Fill" UseLayoutRounding="True" RenderOptions.BitmapScalingMode="Unspecified"/>
         </Border>
-        <Border Grid.Column="1" Grid.Row="0" Grid.RowSpan="2">
-            <Image Source="{Binding CustomModelPicture}" Margin="80" UseLayoutRounding="True" RenderOptions.BitmapScalingMode="Unspecified"/>
+        <Border Grid.Column="1" Grid.Row="2">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <Image Source="{Binding CustomModelPicture}" Grid.Row="0" Margin="80" UseLayoutRounding="True" RenderOptions.BitmapScalingMode="Unspecified"/>
+                <Grid Grid.Row="1" Grid.Column="0">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="22"/>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+                    <StackPanel Orientation="Horizontal" Grid.Row="0">
+                        <RadioButton Margin="5,0,0,0" Width="100" IsChecked="True">
+                            <RadioButton.Content>
+                                <TextBlock Text="Input" FontSize="15" FontWeight="Bold"/>
+                            </RadioButton.Content>
+                        </RadioButton>
+                        <RadioButton  Width="120">
+                            <RadioButton.Content>
+                                <TextBlock Text="Parameter" FontSize="15" FontWeight="Bold"/>
+                            </RadioButton.Content>
+                        </RadioButton>
+                    </StackPanel>
+                    <Border BorderBrush="Gray" BorderThickness="1" Grid.Row="1" Margin="8,4,0,4">
+                        <DataGrid ItemsSource="{Binding CurrentModel.Parameters}"  AutoGenerateColumns="False" >
+                            <DataGrid.Columns>
+                                <DataGridTextColumn Header="ID" Binding="{Binding ID}" Width="40"/>
+                                <DataGridTextColumn Header="Name" Binding="{Binding Name}" Width="*"/>
+                                <DataGridTextColumn Header="Offset X" Binding="{Binding Offset.X}" Width="*"/>
+                                <DataGridTextColumn Header="Offset Y" Binding="{Binding Offset.Y}" Width="*"/>
+                            </DataGrid.Columns>
+                        </DataGrid>
+                    </Border>
+                </Grid>
+                <StackPanel Grid.Row="1" Grid.Column="2">
+                    <TextBlock Text="Output" Margin="12,0,0,0" FontWeight="Bold" FontSize="15"/>
+                    <Border BorderBrush="Gray" BorderThickness="1" Margin="8,5,0,8">
+                        <DataGrid ItemsSource="{Binding CurrentModel.Inputs}" Height="170" AutoGenerateColumns="False" >
+                            <DataGrid.Columns>
+                                <DataGridTextColumn Header="ID" Binding="{Binding ID}" Width="40"/>
+                                <DataGridTextColumn Header="Name" Binding="{Binding Name}" Width="*"/>
+                                <DataGridTextColumn Header="Result" Binding="{Binding Result}" Width="*"/>
+                            </DataGrid.Columns>
+                        </DataGrid>
+                    </Border>
+                </StackPanel>
+            </Grid>
         </Border>
     </Grid>
 </UserControl>
