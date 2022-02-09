@@ -14,6 +14,9 @@ namespace PrismMvvmApp.Models
 {
     public class BaseModelData : BindableBase
     {
+        public BaseModelData()
+        {
+        }
         public BaseModelData( int modelId, string name, Point offset,  Size size, string group)
         {
             ModelID = modelId;
@@ -21,9 +24,9 @@ namespace PrismMvvmApp.Models
             Offset = offset;
             Size = size;
             Group = group;
-            Inputs = new ObservableCollection<ModelIOPatram>();
-            Outputs = new ObservableCollection<ModelIOPatram>();
-            Parameters = new ObservableCollection<ModelIOPatram>();
+            Inputs = new ObservableCollection<ModelIOParam>();
+            Outputs = new ObservableCollection<ModelIOParam>();
+            Parameters = new ObservableCollection<ModelIOParam>();
         }
 
         private string _group;
@@ -61,23 +64,24 @@ namespace PrismMvvmApp.Models
             set { SetProperty(ref _size, value); }
         }
 
-        private ObservableCollection<ModelIOPatram> _inputs;
-        public ObservableCollection<ModelIOPatram> Inputs
+        private ObservableCollection<ModelIOParam> _inputs;
+        public ObservableCollection<ModelIOParam> Inputs
         {
             get { return _inputs; }
             set { SetProperty(ref _inputs, value); }
         }
-        private ObservableCollection<ModelIOPatram> _outputs;
-        public ObservableCollection<ModelIOPatram> Outputs
-        {
-            get { return _outputs; }
-            set { SetProperty(ref _outputs, value); }
-        }
-        private ObservableCollection<ModelIOPatram> _parameters;
-        public ObservableCollection<ModelIOPatram> Parameters
+
+        private ObservableCollection<ModelIOParam> _parameters;
+        public ObservableCollection<ModelIOParam> Parameters
         {
             get { return _parameters; }
             set { SetProperty(ref _parameters, value); }
+        }
+        private ObservableCollection<ModelIOParam> _outputs;
+        public ObservableCollection<ModelIOParam> Outputs
+        {
+            get { return _outputs; }
+            set { SetProperty(ref _outputs, value); }
         }
     }
 }

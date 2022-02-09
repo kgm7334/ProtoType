@@ -13,5 +13,9 @@ namespace PrismMvvmApp.Interface
         ObservableCollection<IOCodeSource> LoadInputCode();
         ObservableCollection<IOCodeSource> LoadOutputCode();
         ObservableCollection<IOCodeSource> LoadParameterCode();
+        ObservableCollection<ModelIOParam> LoadModelInputs(string modelName);
+        ObservableCollection<ModelIOParam> LoadModelOutputs(string modelName);
+        ObservableCollection<ModelIOParam> LoadModelParameters(string modelName);
+        ModelDataNode SearchBaseModel(string modelName);
     }
 }

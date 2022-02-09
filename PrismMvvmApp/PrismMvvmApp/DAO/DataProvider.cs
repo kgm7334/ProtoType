@@ -27,6 +27,21 @@ namespace PrismMvvmApp.DAO
             return _dataProvider.LoadInputCode();
         }
 
+        public ObservableCollection<ModelIOParam> LoadModelInputs(string modelName)
+        {
+            throw new NotImplementedException();
+        }
+
+        public ObservableCollection<ModelIOParam> LoadModelOutputs(string modelName)
+        {
+            throw new NotImplementedException();
+        }
+
+        public ObservableCollection<ModelIOParam> LoadModelParameters(string modelName)
+        {
+            throw new NotImplementedException();
+        }
+
         public ObservableCollection<IOCodeSource> LoadOutputCode()
         {
             return _dataProvider.LoadOutputCode();
@@ -35,6 +50,11 @@ namespace PrismMvvmApp.DAO
         public ObservableCollection<IOCodeSource> LoadParameterCode()
         {
             return _dataProvider.LoadParameterCode();
+        }
+
+        public ModelDataNode SearchBaseModel(string modelName)
+        {
+            return _dataProvider.SearchBaseModel(modelName);
         }
     }
 }

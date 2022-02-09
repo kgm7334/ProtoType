@@ -14,6 +14,12 @@ namespace PrismMvvmApp.Models
 {
     public class ModelDataNode : BaseModelData
     {
+        public ModelDataNode()
+            :base()
+        {
+
+        }
+
         public ModelDataNode(string group, int id, string name, Point position, Size size, int parentId, int childId)
             :base(id, name, position, size, group)
         {

@@ -11,15 +11,21 @@ using System.Windows;
 
 namespace PrismMvvmApp.Models
 {
-    public class ModelIOPatram : IOCodeSource
+    public class ModelIOParam : IOCodeSource
     {
-        public ModelIOPatram(int index, Point offset, string group, int id, string name, int position, enDataType type )
+        public ModelIOParam(enIOParamType ioParamType, int index, Point offset, string group, int id, string name, int position, enDataType type )
             :base(group, id, name, position, type)
         {
             Index = index;
             Offset = offset;
         }
 
+        private enIOParamType _ioParamType;
+        public enIOParamType IOParamType
+        {
+            get { return _ioParamType; }
+            set { SetProperty(ref _ioParamType, value); }
+        }
         private int _index;
         public int Index
         {
