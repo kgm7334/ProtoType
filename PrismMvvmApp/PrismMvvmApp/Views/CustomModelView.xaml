@@ -76,16 +76,16 @@
                                     <Grid>
                                         <StackPanel>
                                             <StackPanel Orientation="Horizontal">
-                                                <Image Source="C:\\vms\\Images\\N1.png" Margin="30,0,0,0" ToolTip="N1" Height="40" Width="80" Stretch="Fill" />
+                                                <Image Source="C:\\vms\\Images\\N1_S.tif" Margin="30,0,0,0" ToolTip="N1" Height="32" Width="60" Stretch="Fill" />
                                             </StackPanel>
                                             <StackPanel Orientation="Horizontal">
-                                                <Image Source="C:\\vms\\Images\\N2.png" Margin="30,0,0,0" ToolTip="N2" Height="40" Width="80" Stretch="Fill" />
+                                                <Image Source="C:\\vms\\Images\\N2.png" Margin="30,0,0,0" ToolTip="N2" Height="32" Width="60" Stretch="Fill" />
                                             </StackPanel>
                                             <StackPanel Orientation="Horizontal">
-                                                <Image Source="C:\\vms\\Images\\N3.png" Margin="30,0,0,0" ToolTip="N3" Height="40" Width="80" Stretch="Fill" />
+                                                <Image Source="C:\\vms\\Images\\N3.png" Margin="30,0,0,0" ToolTip="N3" Height="32" Width="60" Stretch="Fill" />
                                             </StackPanel>
                                             <StackPanel Orientation="Horizontal">
-                                                <Image Source="C:\\vms\\Images\\N4.png" Margin="30,0,0,0" ToolTip="N4" Height="40" Width="80" Stretch="Fill" />
+                                                <Image Source="C:\\vms\\Images\\N4.png" Margin="30,0,0,0" ToolTip="N4" Height="32" Width="60" Stretch="Fill" />
                                             </StackPanel>
                                         </StackPanel>
                                     </Grid>
@@ -101,16 +101,16 @@
                                     <Grid>
                                         <StackPanel>
                                             <StackPanel Orientation="Horizontal">
-                                                <Image Source="C:\\vms\\Images\\S1.png" Margin="30,0,0,0" ToolTip="S1" Height="40" Width="80" Stretch="Fill" />
+                                                <Image Source="C:\\vms\\Images\\S1.png" Margin="30,0,0,0" ToolTip="S1" Height="32" Width="60" Stretch="Fill" />
                                             </StackPanel>
                                             <StackPanel Orientation="Horizontal">
-                                                <Image Source="C:\\vms\\Images\\S2.png" Margin="30,0,0,0" ToolTip="S2" Height="40" Width="80" Stretch="Fill" />
+                                                <Image Source="C:\\vms\\Images\\S2.png" Margin="30,0,0,0" ToolTip="S2" Height="32" Width="60" Stretch="Fill" />
                                             </StackPanel>
                                             <StackPanel Orientation="Horizontal">
-                                                <Image Source="C:\\vms\\Images\\S3.png" Margin="30,0,0,0" ToolTip="S3" Height="40" Width="80" Stretch="Fill" />
+                                                <Image Source="C:\\vms\\Images\\S3.png" Margin="30,0,0,0" ToolTip="S3" Height="32" Width="60" Stretch="Fill" />
                                             </StackPanel>
                                             <StackPanel Orientation="Horizontal">
-                                                <Image Source="C:\\vms\\Images\\S4.png" Margin="30,0,0,0" ToolTip="S4" Height="40" Width="80" Stretch="Fill" />
+                                                <Image Source="C:\\vms\\Images\\S4.png" Margin="30,0,0,0" ToolTip="S4" Height="32" Width="60" Stretch="Fill" />
                                             </StackPanel>
                                         </StackPanel>
                                     </Grid>
@@ -126,16 +126,16 @@
                                     <Grid>
                                         <StackPanel>
                                             <StackPanel Orientation="Horizontal">
-                                                <Image Source="C:\\vms\\Images\\V1.png" Margin="30,0,0,0" ToolTip="V1" Height="40" Width="80" Stretch="Fill" />
+                                                <Image Source="C:\\vms\\Images\\V1.png" Margin="30,0,0,0" ToolTip="V1" Height="32" Width="60" Stretch="Fill" />
                                             </StackPanel>
                                             <StackPanel Orientation="Horizontal">
-                                                <Image Source="C:\\vms\\Images\\V2.png" Margin="30,0,0,0" ToolTip="V2" Height="40" Width="80" Stretch="Fill" />
+                                                <Image Source="C:\\vms\\Images\\V2.png" Margin="30,0,0,0" ToolTip="V2" Height="32" Width="60" Stretch="Fill" />
                                             </StackPanel>
                                             <StackPanel Orientation="Horizontal">
-                                                <Image Source="C:\\vms\\Images\\V3.png" Margin="30,0,0,0" ToolTip="V3" Height="40" Width="80" Stretch="Fill" />
+                                                <Image Source="C:\\vms\\Images\\V3.png" Margin="30,0,0,0" ToolTip="V3" Height="32" Width="60" Stretch="Fill" />
                                             </StackPanel>
                                             <StackPanel Orientation="Horizontal">
-                                                <Image Source="C:\\vms\\Images\\V4.png" Margin="30,0,0,0" ToolTip="V4" Height="40" Width="80" Stretch="Fill" />
+                                                <Image Source="C:\\vms\\Images\\V4.png" Margin="30,0,0,0" ToolTip="V4" Height="32" Width="60" Stretch="Fill" />
                                             </StackPanel>
                                         </StackPanel>
                                     </Grid>
@@ -151,13 +151,13 @@
                                     <Grid>
                                         <StackPanel>
                                             <StackPanel Orientation="Horizontal">
-                                                <Image Source="C:\\vms\\Images\\M1.png" Margin="30,0,0,0" ToolTip="M1" Height="40" Width="80" Stretch="Fill" />
+                                                <Image Source="C:\\vms\\Images\\M1.png" Margin="30,0,0,0" ToolTip="M1" Height="32" Width="60" Stretch="Fill" />
                                             </StackPanel>
                                             <StackPanel Orientation="Horizontal">
-                                                <Image Source="C:\\vms\\Images\\M2.png" Margin="30,0,0,0" ToolTip="M2" Height="40" Width="80" Stretch="Fill" />
+                                                <Image Source="C:\\vms\\Images\\M2.png" Margin="30,0,0,0" ToolTip="M2" Height="32" Width="60" Stretch="Fill" />
                                             </StackPanel>
                                             <StackPanel Orientation="Horizontal">
-                                                <Image Source="C:\\vms\\Images\\M3.png" Margin="30,0,0,0" ToolTip="M3" Height="40" Width="80" Stretch="Fill" />
+                                                <Image Source="C:\\vms\\Images\\M3.png" Margin="30,0,0,0" ToolTip="M3" Height="32" Width="60" Stretch="Fill" />
                                             </StackPanel>
                                         </StackPanel>
                                     </Grid>
@@ -194,7 +194,7 @@
                                     <ColumnDefinition Width="25"/>
                                 </Grid.ColumnDefinitions>
 
-                                <TextBlock HorizontalAlignment="Left" Margin="10,0,0,0" Text="Index" Grid.Column="0" FontWeight="Bold" FontSize="15"/>
+                                <TextBlock HorizontalAlignment="Left" Margin="10,0,0,0" Text="ModelList" Grid.Column="0" FontWeight="Bold" FontSize="15"/>
                                 <Border BorderThickness="1" BorderBrush="Gray" Grid.Column="1" >
                                     <Image Source="C:\\vms\\Images\\Add.ico"  Stretch="Fill" Margin="3" ToolTip="Add"/>
                                 </Border>
@@ -210,10 +210,8 @@
                             <DataGrid ItemsSource="{Binding IOCodeList}" AutoGenerateColumns="False" >
                                 <DataGrid.Columns>
                                     <DataGridTextColumn Header="ID" Binding="{Binding ID}" Width="40"/>
-                                    <DataGridTextColumn Header="Group" Binding="{Binding Group}" Width="*"/>
                                     <DataGridTextColumn Header="Name" Binding="{Binding Name}" Width="*"/>
-                                    <DataGridTextColumn Header="Position" Binding="{Binding Position}" Width="*"/>
-                                    <DataGridTextColumn Header="Type" Binding="{Binding DataType}" Width="50"/>
+                                    <DataGridTextColumn Header="Parent" Binding="{Binding ParentID}" Width="*"/>
                                 </DataGrid.Columns>
                             </DataGrid>
                         </Border>
