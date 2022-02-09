@@ -21,20 +21,19 @@
         <Border Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="2" BorderBrush="LightGray" BorderThickness="2">
             <Grid>
                 <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="200"/>
+                    <ColumnDefinition />
                     <ColumnDefinition Width="25"/>
+                    <ColumnDefinition Width="5"/>
                     <ColumnDefinition Width="25"/>
                     <ColumnDefinition Width="10"/>
                 </Grid.ColumnDefinitions>
-                <TextBlock FontSize="20" Grid.Column="0" Text="{Binding MainTitle}"/>
+                <TextBlock FontSize="20" HorizontalAlignment="Center" Grid.Column="0" Text="{Binding MainTitle}"/>
                 <Border BorderThickness="1" BorderBrush="Gray" Grid.Column="1" Width="25">
                     <Image Source="C:\\vms\\Images\\Import.png"  Stretch="Fill" />
                 </Border>
-                <Button Grid.Column="2">
-                    <Button.Content>
-                        <Image Source="{Binding FileIcon}" UseLayoutRounding="True" RenderOptions.BitmapScalingMode="Unspecified"/>
-                    </Button.Content>
-                </Button>
+                <Border BorderThickness="1" BorderBrush="Gray" Grid.Column="3" Width="25">
+                    <Image Source="C:\\vms\\Images\\Export.ico"  Stretch="Fill" />
+                </Border>
             </Grid>
         </Border>
         <!--<ContentControl Grid.Row="0" Grid.ColumnSpan="2" prism:RegionManager.RegionName="HeaderRegion"/>-->

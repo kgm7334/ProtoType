@@ -90,7 +90,7 @@
     <Compile Include="Events\MainTitleEvent.cs" />
     <Compile Include="Events\MessageEvent.cs" />
     <Compile Include="Interface\IDataProvider.cs" />
-    <Compile Include="Models\CustomModelData.cs" />
+    <Compile Include="Models\ModelDataNode.cs" />
     <Compile Include="Models\enDataType.cs" />
     <Compile Include="Models\BaseModelData.cs" />
     <Compile Include="Models\ModelIOParam.cs" />
