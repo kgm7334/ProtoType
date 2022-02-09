@@ -5,11 +5,12 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:PrismMvvmApp.Views"
              mc:Ignorable="d" 
-             d:DesignHeight="450" d:DesignWidth="800">
+             d:DesignHeight="450" d:DesignWidth="800" Background="AliceBlue">
     <Grid>
+
         <Grid ShowGridLines="False">
             <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="0.7*"/>
+                <ColumnDefinition Width="220"/>
                 <ColumnDefinition Width="3*"/>
                 <ColumnDefinition Width="2*"/>
             </Grid.ColumnDefinitions>
@@ -18,202 +19,153 @@
                 <RowDefinition Height="30*"/>
             </Grid.RowDefinitions>
             <Border Grid.Column="0" Grid.Row="0" Grid.RowSpan="2">
-                <ScrollViewer>
-                    <StackPanel ScrollViewer.CanContentScroll="True" ScrollViewer.VerticalScrollBarVisibility="Visible">
-                        <Expander Width="auto" Background="White" ExpandDirection="Down" IsExpanded="true">
-                            <Expander.Header>
-                                <StackPanel Orientation="Horizontal">
-                                    <TextBlock VerticalAlignment="Center" FontWeight="Bold">Nozzle</TextBlock>
-                                    <Button Margin="102,0,0,0" Width="34" VerticalContentAlignment="Center" Background="LightSkyBlue">
-                                        <Button.Content>
-                                            <Image Source="C:\\vms\\Images\\Add.ico"  Stretch="Fill" />
-                                        </Button.Content>
-                                    </Button>
-                                </StackPanel>
-                            </Expander.Header>
-                            <Expander.Content>
-                                <Grid>
-                                    <StackPanel>
-                                        <StackPanel Orientation="Horizontal">
-                                            <Button Content="N1" Width="160" Command="{Binding BaseModelGetPictureCommand}" CommandParameter="N1.png"/>
-                                            <Button Margin="5,0,0,0"  Width="30" VerticalContentAlignment="Center" Background="White">
-                                                <Button.Content>
-                                                    <Image Source="C:\\vms\\Images\\Delete.ico"  Stretch="Fill" />
-                                                </Button.Content>
-                                            </Button>
-                                        </StackPanel>
-                                        <StackPanel Orientation="Horizontal">
-                                            <Button Content="N2" Width="160" Command="{Binding BaseModelGetPictureCommand}" CommandParameter="N2.png"/>
-                                            <Button Margin="5,0,0,0"  Width="30" VerticalContentAlignment="Center" Background="White">
-                                                <Button.Content>
-                                                    <Image Source="C:\\vms\\Images\\Delete.ico"  Stretch="Fill" />
-                                                </Button.Content>
-                                            </Button>
-                                        </StackPanel>
-                                        <StackPanel Orientation="Horizontal">
-                                            <Button Content="N3" Width="160" Command="{Binding BaseModelGetPictureCommand}" CommandParameter="N3.png"/>
-                                            <Button Margin="5,0,0,0"  Width="30" VerticalContentAlignment="Center" Background="White">
-                                                <Button.Content>
-                                                    <Image Source="C:\\vms\\Images\\Delete.ico"  Stretch="Fill" />
-                                                </Button.Content>
-                                            </Button>
-                                        </StackPanel>
-                                        <StackPanel Orientation="Horizontal">
-                                            <Button Content="N4" Width="160" Command="{Binding BaseModelGetPictureCommand}" CommandParameter="N4.png"/>
-                                            <Button Margin="5,0,0,0"  Width="30" VerticalContentAlignment="Center" Background="White">
-                                                <Button.Content>
-                                                    <Image Source="C:\\vms\\Images\\Delete.ico"  Stretch="Fill" />
-                                                </Button.Content>
-                                            </Button>
-                                        </StackPanel>
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="0.5*"/>
+                        <RowDefinition Height="35"/>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+                    <ScrollViewer Grid.Row="0">
+                        <StackPanel ScrollViewer.CanContentScroll="True" ScrollViewer.VerticalScrollBarVisibility="Visible">
+                            <Expander Width="auto" Background="White" ExpandDirection="Down" IsExpanded="true">
+                                <Expander.Header>
+                                    <StackPanel Orientation="Horizontal">
+                                        <TextBlock VerticalAlignment="Center" Foreground="White" FontWeight="Bold">Custom</TextBlock>
+                                        <Button Margin="102,0,0,0" Width="34" VerticalContentAlignment="Center" Background="LightSkyBlue">
+                                            <Button.Content>
+                                                <Image Source="C:\\vms\\Images\\Add.ico"  Stretch="Fill" />
+                                            </Button.Content>
+                                        </Button>
                                     </StackPanel>
-                                </Grid>
-                            </Expander.Content>
-                        </Expander>
-                        <Expander Width="auto" Background="White" ExpandDirection="Down" IsExpanded="true">
-                            <Expander.Header>
-                                <StackPanel Orientation="Horizontal">
-                                    <TextBlock VerticalAlignment="Center" FontWeight="Bold">Sensor</TextBlock>
-                                    <Button Margin="102,0,0,0" Width="34" VerticalContentAlignment="Center" Background="LightSkyBlue">
-                                        <Button.Content>
-                                            <Image Source="C:\\vms\\Images\\Add.ico"  Stretch="Fill" />
-                                        </Button.Content>
-                                    </Button>
-                                </StackPanel>
-                            </Expander.Header>
-                            <Expander.Content>
-                                <Grid>
-                                    <StackPanel>
-                                        <StackPanel Orientation="Horizontal">
-                                            <Button Content="S1" Width="160" Command="{Binding BaseModelGetPictureCommand}" CommandParameter="S1.png"/>
-                                            <Button Margin="5,0,0,0"  Width="30" VerticalContentAlignment="Center" Background="White">
-                                                <Button.Content>
-                                                    <Image Source="C:\\vms\\Images\\Delete.ico"  Stretch="Fill" />
-                                                </Button.Content>
-                                            </Button>
+                                </Expander.Header>
+                                <Expander.Content>
+                                    <Grid>
+                                        <StackPanel>
+                                            <StackPanel Orientation="Horizontal">
+                                                <Button Content="Custom Model 1" Width="160" Command="{Binding CustomModelGetPictureCommand}" CommandParameter="CustomModel1.png"/>
+                                                <Button Margin="5,0,0,0"  Width="30" VerticalContentAlignment="Center" Background="White">
+                                                    <Button.Content>
+                                                        <Image Source="C:\\vms\\Images\\Delete.ico"  Stretch="Fill" />
+                                                    </Button.Content>
+                                                </Button>
+                                            </StackPanel>
+                                            <StackPanel Orientation="Horizontal">
+                                                <Button Content="Custom Model 2" Width="160" Command="{Binding CustomModelGetPictureCommand}" CommandParameter="CustomModel.png"/>
+                                                <Button Margin="5,0,0,0"  Width="30" VerticalContentAlignment="Center" Background="White">
+                                                    <Button.Content>
+                                                        <Image Source="C:\\vms\\Images\\Delete.ico"  Stretch="Fill" />
+                                                    </Button.Content>
+                                                </Button>
+                                            </StackPanel>
                                         </StackPanel>
-                                        <StackPanel Orientation="Horizontal">
-                                            <Button Content="S2" Width="160" Command="{Binding BaseModelGetPictureCommand}" CommandParameter="S2.png"/>
-                                            <Button Margin="5,0,0,0"  Width="30" VerticalContentAlignment="Center" Background="White">
-                                                <Button.Content>
-                                                    <Image Source="C:\\vms\\Images\\Delete.ico"  Stretch="Fill" />
-                                                </Button.Content>
-                                            </Button>
-                                        </StackPanel>
-                                        <StackPanel Orientation="Horizontal">
-                                            <Button Content="S3" Width="160" Command="{Binding BaseModelGetPictureCommand}" CommandParameter="S3.png"/>
-                                            <Button Margin="5,0,0,0"  Width="30" VerticalContentAlignment="Center" Background="White">
-                                                <Button.Content>
-                                                    <Image Source="C:\\vms\\Images\\Delete.ico"  Stretch="Fill" />
-                                                </Button.Content>
-                                            </Button>
-                                        </StackPanel>
-                                        <StackPanel Orientation="Horizontal">
-                                            <Button Content="S4" Width="160" Command="{Binding BaseModelGetPictureCommand}" CommandParameter="S4.png"/>
-                                            <Button Margin="5,0,0,0"  Width="30" VerticalContentAlignment="Center" Background="White">
-                                                <Button.Content>
-                                                    <Image Source="C:\\vms\\Images\\Delete.ico"  Stretch="Fill" />
-                                                </Button.Content>
-                                            </Button>
-                                        </StackPanel>
+                                    </Grid>
+                                </Expander.Content>
+                            </Expander>
+                        </StackPanel>
+                    </ScrollViewer>
+                    <TextBlock Text="BaseModel" HorizontalAlignment="Center" FontSize="25" Foreground="SkyBlue" Grid.Row="1"/>
+                    <ScrollViewer Grid.Row="2">
+                        <StackPanel ScrollViewer.CanContentScroll="True" ScrollViewer.VerticalScrollBarVisibility="Visible">
+                            <Expander Width="auto" Background="White" ExpandDirection="Down" IsExpanded="true">
+                                <Expander.Header>
+                                    <StackPanel Orientation="Horizontal">
+                                        <TextBlock VerticalAlignment="Center" Foreground="White" FontWeight="Bold">Nozzle</TextBlock>
                                     </StackPanel>
-                                </Grid>
-                            </Expander.Content>
-                        </Expander>
-                        <Expander Width="auto" Background="White" ExpandDirection="Down" IsExpanded="true">
-                            <Expander.Header>
-                                <StackPanel Orientation="Horizontal">
-                                    <TextBlock VerticalAlignment="Center" FontWeight="Bold">Valve</TextBlock>
-                                    <Button Margin="110,0,0,0" Width="34"  VerticalContentAlignment="Center" Background="LightSkyBlue">
-                                        <Button.Content>
-                                            <Image Source="C:\\vms\\Images\\Add.ico"  Stretch="Fill" />
-                                        </Button.Content>
-                                    </Button>
-                                </StackPanel>
-                            </Expander.Header>
-                            <Expander.Content>
-                                <Grid>
-                                    <StackPanel>
-                                        <StackPanel Orientation="Horizontal">
-                                            <Button Content="V1" Width="160" Command="{Binding BaseModelGetPictureCommand}" CommandParameter="V1.png"/>
-                                            <Button Margin="5,0,0,0" Width="30" VerticalContentAlignment="Center" Background="White">
-                                                <Button.Content>
-                                                    <Image Source="C:\\vms\\Images\\Delete.ico"  Stretch="Fill" />
-                                                </Button.Content>
-                                            </Button>
+                                </Expander.Header>
+                                <Expander.Content>
+                                    <Grid>
+                                        <StackPanel>
+                                            <StackPanel Orientation="Horizontal">
+                                                <Image Source="C:\\vms\\Images\\N1.png" Margin="30,0,0,0" ToolTip="N1" Height="40" Width="80" Stretch="Fill" />
+                                            </StackPanel>
+                                            <StackPanel Orientation="Horizontal">
+                                                <Image Source="C:\\vms\\Images\\N2.png" Margin="30,0,0,0" ToolTip="N2" Height="40" Width="80" Stretch="Fill" />
+                                            </StackPanel>
+                                            <StackPanel Orientation="Horizontal">
+                                                <Image Source="C:\\vms\\Images\\N3.png" Margin="30,0,0,0" ToolTip="N3" Height="40" Width="80" Stretch="Fill" />
+                                            </StackPanel>
+                                            <StackPanel Orientation="Horizontal">
+                                                <Image Source="C:\\vms\\Images\\N4.png" Margin="30,0,0,0" ToolTip="N4" Height="40" Width="80" Stretch="Fill" />
+                                            </StackPanel>
                                         </StackPanel>
-                                        <StackPanel Orientation="Horizontal">
-                                            <Button Content="V2" Width="160" Command="{Binding BaseModelGetPictureCommand}" CommandParameter="V2.png"/>
-                                            <Button Margin="5,0,0,0" Width="30" VerticalContentAlignment="Center" Background="White">
-                                                <Button.Content>
-                                                    <Image Source="C:\\vms\\Images\\Delete.ico"  Stretch="Fill" />
-                                                </Button.Content>
-                                            </Button>
-                                        </StackPanel>
-                                        <StackPanel Orientation="Horizontal">
-                                            <Button Content="V3" Width="160" Command="{Binding BaseModelGetPictureCommand}" CommandParameter="V3.png"/>
-                                            <Button Margin="5,0,0,0"  Width="30" VerticalContentAlignment="Center" Background="White">
-                                                <Button.Content>
-                                                    <Image Source="C:\\vms\\Images\\Delete.ico"  Stretch="Fill" />
-                                                </Button.Content>
-                                            </Button>
-                                        </StackPanel>
-                                        <StackPanel Orientation="Horizontal">
-                                            <Button Content="V4" Width="160" Command="{Binding BaseModelGetPictureCommand}" CommandParameter="V4.png"/>
-                                            <Button Margin="5,0,0,0"  Width="30" VerticalContentAlignment="Center" Background="White">
-                                                <Button.Content>
-                                                    <Image Source="C:\\vms\\Images\\Delete.ico"  Stretch="Fill" />
-                                                </Button.Content>
-                                            </Button>
-                                        </StackPanel>
+                                    </Grid>
+                                </Expander.Content>
+                            </Expander>
+                            <Expander Width="auto" Background="White" ExpandDirection="Down" IsExpanded="true">
+                                <Expander.Header>
+                                    <StackPanel Orientation="Horizontal">
+                                        <TextBlock VerticalAlignment="Center" Foreground="White" FontWeight="Bold">Sensor</TextBlock>
                                     </StackPanel>
-                                </Grid>
-                            </Expander.Content>
-                        </Expander>
-                        <Expander Width="auto" Background="White" ExpandDirection="Down" IsExpanded="true">
-                            <Expander.Header>
-                                <StackPanel Orientation="Horizontal">
-                                    <TextBlock VerticalAlignment="Center" FontWeight="Bold">Motor</TextBlock>
-                                    <Button Margin="105,0,0,0" Width="34" VerticalContentAlignment="Center" Background="LightSkyBlue">
-                                        <Button.Content>
-                                            <Image Source="C:\\vms\\Images\\Add.ico"  Stretch="Fill" />
-                                        </Button.Content>
-                                    </Button>
-                                </StackPanel>
-                            </Expander.Header>
-                            <Expander.Content>
-                                <Grid>
-                                    <StackPanel>
-                                        <StackPanel Orientation="Horizontal">
-                                            <Button Content="M1" Width="160" Command="{Binding BaseModelGetPictureCommand}" CommandParameter="M1.png"/>
-                                            <Button Margin="5,0,0,0"  Width="30" VerticalContentAlignment="Center" Background="White">
-                                                <Button.Content>
-                                                    <Image Source="C:\\vms\\Images\\Delete.ico"  Stretch="Fill" />
-                                                </Button.Content>
-                                            </Button>
+                                </Expander.Header>
+                                <Expander.Content>
+                                    <Grid>
+                                        <StackPanel>
+                                            <StackPanel Orientation="Horizontal">
+                                                <Image Source="C:\\vms\\Images\\S1.png" Margin="30,0,0,0" ToolTip="S1" Height="40" Width="80" Stretch="Fill" />
+                                            </StackPanel>
+                                            <StackPanel Orientation="Horizontal">
+                                                <Image Source="C:\\vms\\Images\\S2.png" Margin="30,0,0,0" ToolTip="S2" Height="40" Width="80" Stretch="Fill" />
+                                            </StackPanel>
+                                            <StackPanel Orientation="Horizontal">
+                                                <Image Source="C:\\vms\\Images\\S3.png" Margin="30,0,0,0" ToolTip="S3" Height="40" Width="80" Stretch="Fill" />
+                                            </StackPanel>
+                                            <StackPanel Orientation="Horizontal">
+                                                <Image Source="C:\\vms\\Images\\S4.png" Margin="30,0,0,0" ToolTip="S4" Height="40" Width="80" Stretch="Fill" />
+                                            </StackPanel>
                                         </StackPanel>
-                                        <StackPanel Orientation="Horizontal">
-                                            <Button Content="M2" Width="160" Command="{Binding BaseModelGetPictureCommand}" CommandParameter="M2.png"/>
-                                            <Button Margin="5,0,0,0" Width="30" VerticalContentAlignment="Center" Background="White">
-                                                <Button.Content>
-                                                    <Image Source="C:\\vms\\Images\\Delete.ico"  Stretch="Fill" />
-                                                </Button.Content>
-                                            </Button>
-                                        </StackPanel>
-                                        <StackPanel Orientation="Horizontal">
-                                            <Button Content="M3" Width="160" Command="{Binding BaseModelGetPictureCommand}" CommandParameter="M3.png"/>
-                                            <Button Margin="5,0,0,0" Width="30" VerticalContentAlignment="Center" Background="White">
-                                                <Button.Content>
-                                                    <Image Source="C:\\vms\\Images\\Delete.ico"  Stretch="Fill" />
-                                                </Button.Content>
-                                            </Button>
-                                        </StackPanel>
+                                    </Grid>
+                                </Expander.Content>
+                            </Expander>
+                            <Expander Width="auto" Background="White" ExpandDirection="Down" IsExpanded="true">
+                                <Expander.Header>
+                                    <StackPanel Orientation="Horizontal">
+                                        <TextBlock VerticalAlignment="Center" Foreground="White" FontWeight="Bold">Valve</TextBlock>
                                     </StackPanel>
-                                </Grid>
-                            </Expander.Content>
-                        </Expander>
-                    </StackPanel>
-                </ScrollViewer>
+                                </Expander.Header>
+                                <Expander.Content>
+                                    <Grid>
+                                        <StackPanel>
+                                            <StackPanel Orientation="Horizontal">
+                                                <Image Source="C:\\vms\\Images\\V1.png" Margin="30,0,0,0" ToolTip="V1" Height="40" Width="80" Stretch="Fill" />
+                                            </StackPanel>
+                                            <StackPanel Orientation="Horizontal">
+                                                <Image Source="C:\\vms\\Images\\V2.png" Margin="30,0,0,0" ToolTip="V2" Height="40" Width="80" Stretch="Fill" />
+                                            </StackPanel>
+                                            <StackPanel Orientation="Horizontal">
+                                                <Image Source="C:\\vms\\Images\\V3.png" Margin="30,0,0,0" ToolTip="V3" Height="40" Width="80" Stretch="Fill" />
+                                            </StackPanel>
+                                            <StackPanel Orientation="Horizontal">
+                                                <Image Source="C:\\vms\\Images\\V4.png" Margin="30,0,0,0" ToolTip="V4" Height="40" Width="80" Stretch="Fill" />
+                                            </StackPanel>
+                                        </StackPanel>
+                                    </Grid>
+                                </Expander.Content>
+                            </Expander>
+                            <Expander Width="auto" Background="White" ExpandDirection="Down" IsExpanded="true">
+                                <Expander.Header>
+                                    <StackPanel Orientation="Horizontal">
+                                        <TextBlock VerticalAlignment="Center" Foreground="White" FontWeight="Bold">Motor</TextBlock>
+                                    </StackPanel>
+                                </Expander.Header>
+                                <Expander.Content>
+                                    <Grid>
+                                        <StackPanel>
+                                            <StackPanel Orientation="Horizontal">
+                                                <Image Source="C:\\vms\\Images\\M1.png" Margin="30,0,0,0" ToolTip="M1" Height="40" Width="80" Stretch="Fill" />
+                                            </StackPanel>
+                                            <StackPanel Orientation="Horizontal">
+                                                <Image Source="C:\\vms\\Images\\M2.png" Margin="30,0,0,0" ToolTip="M2" Height="40" Width="80" Stretch="Fill" />
+                                            </StackPanel>
+                                            <StackPanel Orientation="Horizontal">
+                                                <Image Source="C:\\vms\\Images\\M3.png" Margin="30,0,0,0" ToolTip="M3" Height="40" Width="80" Stretch="Fill" />
+                                            </StackPanel>
+                                        </StackPanel>
+                                    </Grid>
+                                </Expander.Content>
+                            </Expander>
+                        </StackPanel>
+                    </ScrollViewer>
+                </Grid>
             </Border>
             <Border Grid.Column="2" Grid.Row="1" Background="AliceBlue">
                 <Grid>
@@ -228,6 +180,8 @@
                             <RowDefinition Height="*"/>
                             <RowDefinition Height="24"/>
                             <RowDefinition Height="*"/>
+                            <RowDefinition Height="24"/>
+                            <RowDefinition Height="*"/>
                         </Grid.RowDefinitions>
                         <Border Grid.Row="0" Margin="0,0,10,0">
                             <Grid>
@@ -236,14 +190,19 @@
                                     <ColumnDefinition Width="25"/>
                                     <ColumnDefinition Width="2"/>
                                     <ColumnDefinition Width="25"/>
+                                    <ColumnDefinition Width="2"/>
+                                    <ColumnDefinition Width="25"/>
                                 </Grid.ColumnDefinitions>
 
-                                <TextBlock HorizontalAlignment="Left" Margin="10,0,0,0" Text="Input" Grid.Column="0" FontWeight="Bold" FontSize="15"/>
+                                <TextBlock HorizontalAlignment="Left" Margin="10,0,0,0" Text="Index" Grid.Column="0" FontWeight="Bold" FontSize="15"/>
                                 <Border BorderThickness="1" BorderBrush="Gray" Grid.Column="1" >
-                                    <Image Source="C:\\vms\\Images\\Add.ico"  Stretch="Fill" Margin="3" ToolTip="Import"/>
+                                    <Image Source="C:\\vms\\Images\\Add.ico"  Stretch="Fill" Margin="3" ToolTip="Add"/>
                                 </Border>
                                 <Border BorderThickness="1" BorderBrush="Gray" Grid.Column="3" >
-                                    <Image Source="C:\\vms\\Images\\delete.ico"  Stretch="Fill" Margin="3" ToolTip="Import"/>
+                                    <Image Source="C:\\vms\\Images\\delete.ico"  Stretch="Fill" Margin="3" ToolTip="Delete"/>
+                                </Border>
+                                <Border BorderThickness="1" BorderBrush="Gray" Grid.Column="5" >
+                                    <Image Source="C:\\vms\\Images\\Modify.png"  Stretch="Fill" Margin="3" ToolTip="Update"/>
                                 </Border>
                             </Grid>
                         </Border>
@@ -265,15 +224,20 @@
                                     <ColumnDefinition Width="25"/>
                                     <ColumnDefinition Width="2"/>
                                     <ColumnDefinition Width="25"/>
+                                    <ColumnDefinition Width="2"/>
+                                    <ColumnDefinition Width="25"/>
                                 </Grid.ColumnDefinitions>
 
-                                <TextBlock Text="Parameter" HorizontalAlignment="Left" Margin="10,0,0,0" Grid.Column="0" FontWeight="Bold" FontSize="15"/>
+                                <TextBlock Text="Input" HorizontalAlignment="Left" Margin="10,0,0,0" Grid.Column="0" FontWeight="Bold" FontSize="15"/>
 
-                                <Border BorderThickness="1" BorderBrush="Gray" Grid.Column="1">
+                                <Border BorderThickness="1" BorderBrush="Gray" Grid.Column="1" >
                                     <Image Source="C:\\vms\\Images\\Add.ico"  Stretch="Fill" Margin="3" ToolTip="Add"/>
                                 </Border>
                                 <Border BorderThickness="1" BorderBrush="Gray" Grid.Column="3" >
                                     <Image Source="C:\\vms\\Images\\delete.ico"  Stretch="Fill" Margin="3" ToolTip="Delete"/>
+                                </Border>
+                                <Border BorderThickness="1" BorderBrush="Gray" Grid.Column="5" >
+                                    <Image Source="C:\\vms\\Images\\Modify.png"  Stretch="Fill" Margin="3" ToolTip="Update"/>
                                 </Border>
                             </Grid>
                         </Border>
@@ -295,14 +259,19 @@
                                     <ColumnDefinition Width="25"/>
                                     <ColumnDefinition Width="2"/>
                                     <ColumnDefinition Width="25"/>
+                                    <ColumnDefinition Width="2"/>
+                                    <ColumnDefinition Width="25"/>
                                 </Grid.ColumnDefinitions>
 
-                                <TextBlock HorizontalAlignment="Left" Margin="10,0,0,0" Text="Output" Grid.Column="0" FontWeight="Bold" FontSize="15"/>
-                                <Border BorderThickness="1" BorderBrush="Gray" Grid.Column="1">
+                                <TextBlock HorizontalAlignment="Left" Margin="10,0,0,0" Text="Parameter" Grid.Column="0" FontWeight="Bold" FontSize="15"/>
+                                <Border BorderThickness="1" BorderBrush="Gray" Grid.Column="1" >
                                     <Image Source="C:\\vms\\Images\\Add.ico"  Stretch="Fill" Margin="3" ToolTip="Add"/>
                                 </Border>
                                 <Border BorderThickness="1" BorderBrush="Gray" Grid.Column="3" >
                                     <Image Source="C:\\vms\\Images\\delete.ico"  Stretch="Fill" Margin="3" ToolTip="Delete"/>
+                                </Border>
+                                <Border BorderThickness="1" BorderBrush="Gray" Grid.Column="5" >
+                                    <Image Source="C:\\vms\\Images\\Modify.png"  Stretch="Fill" Margin="3" ToolTip="Update"/>
                                 </Border>
                             </Grid>
                         </Border>
@@ -317,13 +286,49 @@
                                 </DataGrid.Columns>
                             </DataGrid>
                         </Border>
+                        <Border Grid.Row="6" Margin="0,0,10,0">
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="1.5*"/>
+                                    <ColumnDefinition Width="25"/>
+                                    <ColumnDefinition Width="2"/>
+                                    <ColumnDefinition Width="25"/>
+                                    <ColumnDefinition Width="2"/>
+                                    <ColumnDefinition Width="25"/>
+                                </Grid.ColumnDefinitions>
 
+                                <TextBlock HorizontalAlignment="Left" Margin="10,0,0,0" Text="Output" Grid.Column="0" FontWeight="Bold" FontSize="15"/>
+                                <Border BorderThickness="1" BorderBrush="Gray" Grid.Column="1" >
+                                    <Image Source="C:\\vms\\Images\\Add.ico"  Stretch="Fill" Margin="3" ToolTip="Add"/>
+                                </Border>
+                                <Border BorderThickness="1" BorderBrush="Gray" Grid.Column="3" >
+                                    <Image Source="C:\\vms\\Images\\delete.ico"  Stretch="Fill" Margin="3" ToolTip="Delete"/>
+                                </Border>
+                                <Border BorderThickness="1" BorderBrush="Gray" Grid.Column="5" >
+                                    <Image Source="C:\\vms\\Images\\Modify.png"  Stretch="Fill" Margin="3" ToolTip="Update"/>
+                                </Border>
+                            </Grid>
+                        </Border>
+                        <Border BorderBrush="Gray" Grid.Row="7" BorderThickness="1" Margin="8,4,8,8">
+                            <DataGrid ItemsSource="{Binding IOCodeList}" AutoGenerateColumns="False" >
+                                <DataGrid.Columns>
+                                    <DataGridTextColumn Header="ID" Binding="{Binding ID}" Width="40"/>
+                                    <DataGridTextColumn Header="Group" Binding="{Binding Group}" Width="*"/>
+                                    <DataGridTextColumn Header="Name" Binding="{Binding Name}" Width="*"/>
+                                    <DataGridTextColumn Header="Position" Binding="{Binding Position}" Width="*"/>
+                                    <DataGridTextColumn Header="Type" Binding="{Binding DataType}" Width="50"/>
+                                </DataGrid.Columns>
+                            </DataGrid>
+                        </Border>
 
                     </Grid>
                 </Grid>
             </Border>
             <Border Grid.Column="1" Grid.Row="0" Grid.RowSpan="2" Background="White">
                 <Image Source="{Binding BaseModelPicture}" Margin="80" UseLayoutRounding="True" RenderOptions.BitmapScalingMode="Unspecified"/>
+            </Border>
+            <Border Grid.Column="1" Grid.Row="0" Grid.RowSpan="2">
+                <Image Source="{Binding CustomModelPicture}" Margin="80" UseLayoutRounding="True" RenderOptions.BitmapScalingMode="Unspecified"/>
             </Border>
             <!--<TextBlock Text="{Binding Message}"/>-->
         </Grid>
