@@ -1,0 +1,9 @@
+
+*.exe
+PrismMvvmApp/PrismMvvmApp/bin/Debug/PrismMvvmApp.pdb
+*.exe
+PrismMvvmApp/PrismMvvmApp/obj/Debug/PrismMvvmApp.g.resources
+PrismMvvmApp/PrismMvvmApp/obj/Debug/PrismMvvmApp.pdb
+PrismMvvmApp/PrismMvvmApp/obj/Debug/Views/CustomModelView.baml
+PrismMvvmApp/PrismMvvmApp/obj/Debug/Views/CustomModelView.g.cs
+PrismMvvmApp/PrismMvvmApp/obj/Debug/Views/CustomModelView.g.i.cs
