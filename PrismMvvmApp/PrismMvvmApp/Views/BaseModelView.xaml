@@ -23,9 +23,9 @@
                         <Expander.Header>
                             <StackPanel Orientation="Horizontal">
                                 <TextBlock VerticalAlignment="Center" FontWeight="Bold">Nozzle</TextBlock>
-                                <Button Margin="25,0,0,0" Height="5" Background="LightSkyBlue" >
+                                <Button Margin="102,0,0,0" Width="34" VerticalContentAlignment="Center" Background="LightSkyBlue">
                                     <Button.Content>
-                                        <TextBlock Text="+" />
+                                        <Image Source="C:\\vms\\Images\\Add.ico"  Stretch="Fill" />
                                     </Button.Content>
                                 </Button>
                             </StackPanel>
@@ -33,10 +33,38 @@
                         <Expander.Content>
                             <Grid>
                                 <StackPanel>
-                                    <Button Content="N1" Command="{Binding BaseModelGetPictureCommand}" CommandParameter="N1.png"/>
-                                    <Button Content="N2" Command="{Binding BaseModelGetPictureCommand}" CommandParameter="N2.png"/>
-                                    <Button Content="N3" Command="{Binding BaseModelGetPictureCommand}" CommandParameter="N3.png"/>
-                                    <Button Content="N4" Command="{Binding BaseModelGetPictureCommand}" CommandParameter="N4.png"/>
+                                    <StackPanel Orientation="Horizontal">
+                                        <Button Content="N1" Width="160" Command="{Binding BaseModelGetPictureCommand}" CommandParameter="N1.png"/>
+                                        <Button Margin="5,0,0,0"  Width="30" VerticalContentAlignment="Center" Background="White">
+                                            <Button.Content>
+                                                <Image Source="C:\\vms\\Images\\Delete.ico"  Stretch="Fill" />
+                                            </Button.Content>
+                                        </Button>
+                                    </StackPanel>
+                                    <StackPanel Orientation="Horizontal">
+                                        <Button Content="N2" Width="160" Command="{Binding BaseModelGetPictureCommand}" CommandParameter="N2.png"/>
+                                        <Button Margin="5,0,0,0"  Width="30" VerticalContentAlignment="Center" Background="White">
+                                            <Button.Content>
+                                                <Image Source="C:\\vms\\Images\\Delete.ico"  Stretch="Fill" />
+                                            </Button.Content>
+                                        </Button>
+                                    </StackPanel>
+                                    <StackPanel Orientation="Horizontal">
+                                        <Button Content="N3" Width="160" Command="{Binding BaseModelGetPictureCommand}" CommandParameter="N3.png"/>
+                                        <Button Margin="5,0,0,0"  Width="30" VerticalContentAlignment="Center" Background="White">
+                                            <Button.Content>
+                                                <Image Source="C:\\vms\\Images\\Delete.ico"  Stretch="Fill" />
+                                            </Button.Content>
+                                        </Button>
+                                    </StackPanel>
+                                    <StackPanel Orientation="Horizontal">
+                                        <Button Content="N4" Width="160" Command="{Binding BaseModelGetPictureCommand}" CommandParameter="N4.png"/>
+                                        <Button Margin="5,0,0,0"  Width="30" VerticalContentAlignment="Center" Background="White">
+                                            <Button.Content>
+                                                <Image Source="C:\\vms\\Images\\Delete.ico"  Stretch="Fill" />
+                                            </Button.Content>
+                                        </Button>
+                                    </StackPanel>
                                 </StackPanel>
                             </Grid>
                         </Expander.Content>
@@ -45,9 +73,9 @@
                         <Expander.Header>
                             <StackPanel Orientation="Horizontal">
                                 <TextBlock VerticalAlignment="Center" FontWeight="Bold">Sensor</TextBlock>
-                                <Button Margin="25,0,0,0" Height="5" VerticalContentAlignment="Center" Background="LightSkyBlue">
+                                <Button Margin="102,0,0,0" Width="34" VerticalContentAlignment="Center" Background="LightSkyBlue">
                                     <Button.Content>
-                                        <TextBlock FontWeight="Bold" FontSize="10" VerticalAlignment="Center" Text="+"/>
+                                        <Image Source="C:\\vms\\Images\\Add.ico"  Stretch="Fill" />
                                     </Button.Content>
                                 </Button>
                             </StackPanel>
@@ -55,10 +83,38 @@
                         <Expander.Content>
                             <Grid>
                                 <StackPanel>
-                                    <Button Content="S1" Command="{Binding BaseModelGetPictureCommand}" CommandParameter="S1.png"/>
-                                    <Button Content="S2" Command="{Binding BaseModelGetPictureCommand}" CommandParameter="S2.png"/>
-                                    <Button Content="S3" Command="{Binding BaseModelGetPictureCommand}" CommandParameter="S3.png"/>
-                                    <Button Content="S4" Command="{Binding BaseModelGetPictureCommand}" CommandParameter="S4.png"/>
+                                    <StackPanel Orientation="Horizontal">
+                                        <Button Content="S1" Width="160" Command="{Binding BaseModelGetPictureCommand}" CommandParameter="S1.png"/>
+                                        <Button Margin="5,0,0,0"  Width="30" VerticalContentAlignment="Center" Background="White">
+                                            <Button.Content>
+                                                <Image Source="C:\\vms\\Images\\Delete.ico"  Stretch="Fill" />
+                                            </Button.Content>
+                                        </Button>
+                                    </StackPanel>
+                                    <StackPanel Orientation="Horizontal">
+                                        <Button Content="S2" Width="160" Command="{Binding BaseModelGetPictureCommand}" CommandParameter="S2.png"/>
+                                        <Button Margin="5,0,0,0"  Width="30" VerticalContentAlignment="Center" Background="White">
+                                            <Button.Content>
+                                                <Image Source="C:\\vms\\Images\\Delete.ico"  Stretch="Fill" />
+                                            </Button.Content>
+                                        </Button>
+                                    </StackPanel>
+                                    <StackPanel Orientation="Horizontal">
+                                        <Button Content="S3" Width="160" Command="{Binding BaseModelGetPictureCommand}" CommandParameter="S3.png"/>
+                                        <Button Margin="5,0,0,0"  Width="30" VerticalContentAlignment="Center" Background="White">
+                                            <Button.Content>
+                                                <Image Source="C:\\vms\\Images\\Delete.ico"  Stretch="Fill" />
+                                            </Button.Content>
+                                        </Button>
+                                    </StackPanel>
+                                    <StackPanel Orientation="Horizontal">
+                                        <Button Content="S4" Width="160" Command="{Binding BaseModelGetPictureCommand}" CommandParameter="S4.png"/>
+                                        <Button Margin="5,0,0,0"  Width="30" VerticalContentAlignment="Center" Background="White">
+                                            <Button.Content>
+                                                <Image Source="C:\\vms\\Images\\Delete.ico"  Stretch="Fill" />
+                                            </Button.Content>
+                                        </Button>
+                                    </StackPanel>
                                 </StackPanel>
                             </Grid>
                         </Expander.Content>
@@ -67,9 +123,9 @@
                         <Expander.Header>
                             <StackPanel Orientation="Horizontal">
                                 <TextBlock VerticalAlignment="Center" FontWeight="Bold">Valve</TextBlock>
-                                <Button Margin="25,0,0,0" Height="5" VerticalContentAlignment="Center" Background="LightSkyBlue">
+                                <Button Margin="110,0,0,0" Width="34"  VerticalContentAlignment="Center" Background="LightSkyBlue">
                                     <Button.Content>
-                                        <TextBlock FontWeight="Bold" FontSize="10" VerticalAlignment="Center" Text="+"/>
+                                        <Image Source="C:\\vms\\Images\\Add.ico"  Stretch="Fill" />
                                     </Button.Content>
                                 </Button>
                             </StackPanel>
@@ -77,10 +133,38 @@
                         <Expander.Content>
                             <Grid>
                                 <StackPanel>
-                                    <Button Content="V1" Command="{Binding BaseModelGetPictureCommand}" CommandParameter="V1.png"/>
-                                    <Button Content="V2" Command="{Binding BaseModelGetPictureCommand}" CommandParameter="V2.png"/>
-                                    <Button Content="V3" Command="{Binding BaseModelGetPictureCommand}" CommandParameter="V3.png"/>
-                                    <Button Content="V4" Command="{Binding BaseModelGetPictureCommand}" CommandParameter="V4.png"/>
+                                    <StackPanel Orientation="Horizontal">
+                                        <Button Content="V1" Width="160" Command="{Binding BaseModelGetPictureCommand}" CommandParameter="V1.png"/>
+                                        <Button Margin="5,0,0,0" Width="30" VerticalContentAlignment="Center" Background="White">
+                                            <Button.Content>
+                                                <Image Source="C:\\vms\\Images\\Delete.ico"  Stretch="Fill" />
+                                            </Button.Content>
+                                        </Button>
+                                    </StackPanel>
+                                    <StackPanel Orientation="Horizontal">
+                                        <Button Content="V2" Width="160" Command="{Binding BaseModelGetPictureCommand}" CommandParameter="V2.png"/>
+                                        <Button Margin="5,0,0,0" Width="30" VerticalContentAlignment="Center" Background="White">
+                                            <Button.Content>
+                                                <Image Source="C:\\vms\\Images\\Delete.ico"  Stretch="Fill" />
+                                            </Button.Content>
+                                        </Button>
+                                    </StackPanel>
+                                    <StackPanel Orientation="Horizontal">
+                                        <Button Content="V3" Width="160" Command="{Binding BaseModelGetPictureCommand}" CommandParameter="V3.png"/>
+                                        <Button Margin="5,0,0,0"  Width="30" VerticalContentAlignment="Center" Background="White">
+                                            <Button.Content>
+                                                <Image Source="C:\\vms\\Images\\Delete.ico"  Stretch="Fill" />
+                                            </Button.Content>
+                                        </Button>
+                                    </StackPanel>
+                                    <StackPanel Orientation="Horizontal">
+                                        <Button Content="V4" Width="160" Command="{Binding BaseModelGetPictureCommand}" CommandParameter="V4.png"/>
+                                        <Button Margin="5,0,0,0"  Width="30" VerticalContentAlignment="Center" Background="White">
+                                            <Button.Content>
+                                                <Image Source="C:\\vms\\Images\\Delete.ico"  Stretch="Fill" />
+                                            </Button.Content>
+                                        </Button>
+                                    </StackPanel>
                                 </StackPanel>
                             </Grid>
                         </Expander.Content>
@@ -89,9 +173,9 @@
                         <Expander.Header>
                             <StackPanel Orientation="Horizontal">
                                 <TextBlock VerticalAlignment="Center" FontWeight="Bold">Motor</TextBlock>
-                                <Button Margin="25,0,0,0" Height="5" VerticalContentAlignment="Center" Background="LightSkyBlue">
+                                <Button Margin="105,0,0,0" Width="34" VerticalContentAlignment="Center" Background="LightSkyBlue">
                                     <Button.Content>
-                                        <TextBlock FontWeight="Bold" FontSize="10" VerticalAlignment="Center" Text="+"/>
+                                        <Image Source="C:\\vms\\Images\\Add.ico"  Stretch="Fill" />
                                     </Button.Content>
                                 </Button>
                             </StackPanel>
@@ -99,9 +183,30 @@
                         <Expander.Content>
                             <Grid>
                                 <StackPanel>
-                                    <Button Content="M1" Command="{Binding BaseModelGetPictureCommand}" CommandParameter="M1.png"/>
-                                    <Button Content="M2" Command="{Binding BaseModelGetPictureCommand}" CommandParameter="M2.png"/>
-                                    <Button Content="M3" Command="{Binding BaseModelGetPictureCommand}" CommandParameter="M3.png"/>
+                                    <StackPanel Orientation="Horizontal">
+                                        <Button Content="M1" Width="160" Command="{Binding BaseModelGetPictureCommand}" CommandParameter="M1.png"/>
+                                        <Button Margin="5,0,0,0"  Width="30" VerticalContentAlignment="Center" Background="White">
+                                            <Button.Content>
+                                                <Image Source="C:\\vms\\Images\\Delete.ico"  Stretch="Fill" />
+                                            </Button.Content>
+                                        </Button>
+                                    </StackPanel>
+                                    <StackPanel Orientation="Horizontal">
+                                        <Button Content="M2" Width="160" Command="{Binding BaseModelGetPictureCommand}" CommandParameter="M2.png"/>
+                                        <Button Margin="5,0,0,0" Width="30" VerticalContentAlignment="Center" Background="White">
+                                            <Button.Content>
+                                                <Image Source="C:\\vms\\Images\\Delete.ico"  Stretch="Fill" />
+                                            </Button.Content>
+                                        </Button>
+                                    </StackPanel>
+                                    <StackPanel Orientation="Horizontal">
+                                        <Button Content="M3" Width="160" Command="{Binding BaseModelGetPictureCommand}" CommandParameter="M3.png"/>
+                                        <Button Margin="5,0,0,0" Width="30" VerticalContentAlignment="Center" Background="White">
+                                            <Button.Content>
+                                                <Image Source="C:\\vms\\Images\\Delete.ico"  Stretch="Fill" />
+                                            </Button.Content>
+                                        </Button>
+                                    </StackPanel>
                                 </StackPanel>
                             </Grid>
                         </Expander.Content>
