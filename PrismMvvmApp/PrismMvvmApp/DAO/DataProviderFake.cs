@@ -14,11 +14,11 @@ namespace PrismMvvmApp.DAO
         public ObservableCollection<IOCodeSource> LoadInputCode()
         {
             var inputCodes = new ObservableCollection<IOCodeSource>();
-            for (int idx = 0; idx < 4; idx++)
+            for (int idx = 0; idx < 7; idx++)
             {
                 inputCodes.Add(new IOCodeSource("Nozzle", idx + 1, $"n_input{idx + 1}", idx + 11, enDataType.Numeric));
             }
-            for (int idx = 0; idx < 2; idx++)
+            for (int idx = 0; idx < 4; idx++)
             {
                 inputCodes.Add(new IOCodeSource("Sensor", idx + 31, $"s_input{idx + 1}", idx+1, idx%2==0 ? enDataType.Numeric : enDataType.String));
             }
@@ -28,7 +28,7 @@ namespace PrismMvvmApp.DAO
             }
             for (int idx = 0; idx < 3; idx++)
             {
-                inputCodes.Add(new IOCodeSource("Valve", idx + 81, $"v_input{idx + 1}", idx + 15, idx==0 ? enDataType.Double : enDataType.Numeric));
+                inputCodes.Add(new IOCodeSource("Valve", idx + 81, $"v_input{idx + 1}", idx + 25, idx==0 ? enDataType.Double : enDataType.Numeric));
             }
             return inputCodes;
         }
@@ -36,21 +36,21 @@ namespace PrismMvvmApp.DAO
         public ObservableCollection<IOCodeSource> LoadOutputCode()
         {
             var inputCodes = new ObservableCollection<IOCodeSource>();
-            for (int idx = 0; idx < 2; idx++)
+            for (int idx = 0; idx < 6; idx++)
             {
-                inputCodes.Add(new IOCodeSource("Nozzle", idx + 101, $"n_output_{idx + 1}", idx + 11, enDataType.Numeric));
+                inputCodes.Add(new IOCodeSource("Nozzle", idx + 101, $"n_output_{idx + 1}", idx + 21, enDataType.Numeric));
             }
-            for (int idx = 0; idx < 2; idx++)
+            for (int idx = 0; idx < 5; idx++)
             {
                 inputCodes.Add(new IOCodeSource("Sensor", idx + 121, $"s_output_{idx + 1}", idx + 1, idx % 2 == 0 ? enDataType.Numeric : enDataType.String));
             }
-            for (int idx = 0; idx < 1; idx++)
+            for (int idx = 0; idx < 5; idx++)
             {
-                inputCodes.Add(new IOCodeSource("Motor", idx + 141, $"m_output_{idx + 1}", idx + 5, idx == 1 ? enDataType.String : enDataType.Numeric));
+                inputCodes.Add(new IOCodeSource("Motor", idx + 141, $"m_output_{idx + 1}", idx + 15, idx == 1 ? enDataType.String : enDataType.Numeric));
             }
-            for (int idx = 0; idx < 3; idx++)
+            for (int idx = 0; idx < 5; idx++)
             {
-                inputCodes.Add(new IOCodeSource("Valve", idx + 161, $"v_output_{idx + 1}", idx + 8, idx == 0 ? enDataType.Double : enDataType.Numeric));
+                inputCodes.Add(new IOCodeSource("Valve", idx + 161, $"v_output_{idx + 1}", idx + 38, idx == 0 ? enDataType.Double : enDataType.Numeric));
             }
             return inputCodes;
         }
@@ -58,19 +58,19 @@ namespace PrismMvvmApp.DAO
         public ObservableCollection<IOCodeSource> LoadParameterCode()
         {
             var inputCodes = new ObservableCollection<IOCodeSource>();
-            for (int idx = 0; idx < 1; idx++)
+            for (int idx = 0; idx < 7; idx++)
             {
                 inputCodes.Add(new IOCodeSource("Nozzle", idx + 211, $"nozzle_param_{idx + 1}", idx + 1, enDataType.Numeric));
             }
-            for (int idx = 0; idx < 2; idx++)
-            {
-                inputCodes.Add(new IOCodeSource("Sensor", idx + 201, $"sensor_param_{idx + 1}", idx + 2, idx % 2 == 0 ? enDataType.Numeric : enDataType.String));
-            }
             for (int idx = 0; idx < 3; idx++)
+            {
+                inputCodes.Add(new IOCodeSource("Sensor", idx + 201, $"sensor_param_{idx + 1}", idx + 11, idx % 2 == 0 ? enDataType.Numeric : enDataType.String));
+            }
+            for (int idx = 0; idx < 5; idx++)
             {
                 inputCodes.Add(new IOCodeSource("Motor", idx + 231, $"moter_param_{idx + 1}", idx + 4, idx == 1 ? enDataType.String : enDataType.Numeric));
             }
-            for (int idx = 0; idx < 2; idx++)
+            for (int idx = 0; idx < 5; idx++)
             {
                 inputCodes.Add(new IOCodeSource("Valve", idx + 241, $"valve_param_{idx + 1}", idx + 8, idx == 0 ? enDataType.Double : enDataType.Numeric));
             }
@@ -79,170 +79,92 @@ namespace PrismMvvmApp.DAO
 
          public ObservableCollection<ModelIOParam> LoadModelInputs(string modelName)
         {
-            int idx;
             string group = GetModelGroup(modelName);
-            int count = 1;
-            var rnd = new Random();
-
-            IOCodeSource target;
-            var result = new ObservableCollection<ModelIOParam>();
             switch (modelName)
             {
                 case "N1":
-                    count = 3;
-                    break;
-                case "N2":
-                    count = 4;
-                    break;
-                case "N3":
-                    count = 2;
-                    break;
-                case "N4":
-                    count = 1;
-                    break;
                 case "S2":
-                    count = 3;
-                    break;
                 case "S3":
-                    count = 3;
-                    break;
+                    return GetIOParamsForModel(LoadInputCode(), group, 3);
+                case "N2":
+                    return GetIOParamsForModel(LoadInputCode(), group, 4);
+                case "N3":
                 case "S4":
-                    count = 2;
-                    break;
                 case "M1":
-                    count = 2;
-                    break;
-                case "M3":
-                    count = 5;
-                    break;
                 case "V2":
-                    count = 2;
-                    break;
                 case "V3":
-                    count = 2;
-                    break;
-            }
-            int no = 1;
-            var inputs = LoadInputCode().Where(x => x.Group == group).ToList();
-            for (int i = 0; i < count; i++)
-            {
-                idx = rnd.Next(0, 10);
-                target = inputs[(idx % inputs.Count) - 1];
-                result.Add(new ModelIOParam(enIOParamType.Input, no++, new System.Windows.Point(0, 24 + (i + 1) * 8), target.Group, target.ID, target.Name, target.Position, target.DataType));
+                    return GetIOParamsForModel(LoadInputCode(), group, 2);
+                case "N4":
+                case "S1":
+                case "M2":
+                case "V1":
+                case "V4":
+                    return GetIOParamsForModel(LoadInputCode(), group, 1);
+                case "M3":
+                    return GetIOParamsForModel(LoadInputCode(), group, 5);
             }
            
-            return result;
+            return new ObservableCollection<ModelIOParam>();
         }
 
         public ObservableCollection<ModelIOParam> LoadModelOutputs(string modelName)
         {
-            int idx;
             string group = GetModelGroup(modelName);
-            int count = 1;
-            var rnd = new Random();
 
-            IOCodeSource target;
-            var result = new ObservableCollection<ModelIOParam>();
-            if (modelName.StartsWith("N"))
-                group = "Nozzle";
             switch (modelName)
             {
                 case "N1":
-                    count = 2;
-                    break;
-                case "N2":
-                    break;
                 case "N3":
-                    count = 2;
-                    break;
                 case "N4":
-                    count = 2;
-                    break;
                 case "S1":
-                    count = 2;
-                    break;
                 case "S2":
-                    count = 2;
-                    break;
-                case "S4":
-                    count = 3;
-                    break;
                 case "V1":
                 case "V2":
-                    count = 2;
-                    break;
+                    return  GetIOParamsForModel(LoadOutputCode(), group, 2);
+                case "N2":
+                case "S3":
+                case "M1":
+                case "M2":
+                case "M3":
+                case "V3":
+                    return GetIOParamsForModel(LoadOutputCode(), group, 1);
+                case "S4":
+                    return GetIOParamsForModel(LoadOutputCode(), group, 3);
                 case "V4":
-                    count = 4;
-                    break;
+                    return GetIOParamsForModel(LoadOutputCode(), group, 4);
             }
-            int no = 1;
-            
-            var outputs = LoadOutputCode().Where(x => x.Group == group).ToList();
-            idx = rnd.Next(0, 10);
-            for (int i = 0; i < count; i++)
-            {
-                idx = rnd.Next(0, 10);
-                target = outputs[(idx % outputs.Count) - 1];
-                result.Add(new ModelIOParam(enIOParamType.Output, no++, new System.Windows.Point(300, 24 + (i + 1) * 8), target.Group, target.ID, target.Name, target.Position, target.DataType));
-            }
-            return result;
+            return new ObservableCollection<ModelIOParam>();
         }
 
 
         public ObservableCollection<ModelIOParam> LoadModelParameters(string modelName)
         {
-            int idx;
             string group = GetModelGroup(modelName);
-            int count = 1;
-            var rnd = new Random();
-
-            IOCodeSource target;
-            var result = new ObservableCollection<ModelIOParam>();
-            if (modelName.StartsWith("N"))
-                group = "Nozzle";
             switch (modelName)
             {
                 case "N1":
-                    count = 2;
-                    break;
-                case "N2":
-                    break;
-                case "N3":
-                    count = 2;
-                    break;
-                case "N4":
-                    count = 2;
-                    break;
-                case "S1":
-                    count = 2;
-                    break;
-                case "S2":
-                    count = 2;
-                    break;
+                case "S3":
                 case "S4":
-                    count = 3;
-                    break;
-                case "V1":
-                    count = 4;
-                    break;
                 case "V3":
-                    count = 2;
-                    break;
+                case "M2":
+                    return GetIOParamsForModel(LoadParameterCode(), group, 2);
+                case "N2":
+                case "S1":
+                case "S2":
+                case "V2":
+                case "M1":
+                    return GetIOParamsForModel(LoadParameterCode(), group, 1);
+                case "N4":
+              
+                    return GetIOParamsForModel(LoadParameterCode(), group, 3);
+                case "N3":
+                case "V1":
+                case "M3":
                 case "V4":
-                    count = 3;
-                    break;
+                    return GetIOParamsForModel(LoadParameterCode(), group, 4);
+           
             }
-            int no = 1;
-
-            var paras = LoadParameterCode().Where(x => x.Group == group).ToList();
-            idx = rnd.Next(0, 10);
-            for (int i = 0; i < count; i++)
-            {
-                idx = rnd.Next(0, 10);
-                target = paras[(idx % paras.Count) - 1];
-                result.Add(new ModelIOParam(enIOParamType.Parameter, no++, new System.Windows.Point(24 + (i + 1) * 8, 0), target.Group, target.ID, target.Name, target.Position, target.DataType));
-            }
-            return result;
+            return new ObservableCollection<ModelIOParam>();
         }
 
         public ModelDataNode SearchBaseModel(string modelName)
@@ -269,6 +191,26 @@ namespace PrismMvvmApp.DAO
             if (modelName.StartsWith("M"))
                 return "Motor";
             return "Valve";
+        }
+
+        private ObservableCollection<ModelIOParam> GetIOParamsForModel(ObservableCollection<IOCodeSource> data, string group, int count)
+        {
+            var rnd = new Random();
+            int no = 1;
+            var result = new ObservableCollection<ModelIOParam>();
+            var paras = data.Where(x => x.Group == group).ToList();
+            for (int i = 0; i < count; i++)
+            {
+                var idx = rnd.Next(0, paras.Count - 1);
+                var target = paras[idx];
+                if (result.Any(x => x.Name == target.Name))
+                {
+                    --i;
+                    continue;
+                }
+                result.Add(new ModelIOParam(enIOParamType.Parameter, no++, new System.Windows.Point(24 + (i + 1) * 8, 0), target.Group, target.ID, target.Name, target.Position, target.DataType));
+            }
+            return result;
         }
     }
 }
