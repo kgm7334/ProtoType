@@ -97,7 +97,7 @@ namespace PrismMvvmApp.ViewModels
         {
             //GotoContents("I/OManagement");
             _iRegionManager.RequestNavigate("ContentsRegion", "IOManagementView");
-            _eventAggregator.GetEvent<IO_TitleEvent>().Publish("Output");
+            _eventAggregator.GetEvent<IOTitleEvent>().Publish("Output");
             _eventAggregator.GetEvent<MainTitleEvent>().Publish("IOManagementView-Output");
         }
 
@@ -105,7 +105,7 @@ namespace PrismMvvmApp.ViewModels
         {
             //GotoContents("I/OManagement");
             _iRegionManager.RequestNavigate("ContentsRegion", "IOManagementView");
-            _eventAggregator.GetEvent<IO_TitleEvent>().Publish("Input");
+            _eventAggregator.GetEvent<IOTitleEvent>().Publish("Input");
             _eventAggregator.GetEvent<MainTitleEvent>().Publish("IOManagementView-Input");
         }
 
@@ -113,7 +113,7 @@ namespace PrismMvvmApp.ViewModels
         {
             //GotoContents("I/OManagement");
             _iRegionManager.RequestNavigate("ContentsRegion", "IOManagementView");
-            _eventAggregator.GetEvent<IO_TitleEvent>().Publish("Parameter");
+            _eventAggregator.GetEvent<IOTitleEvent>().Publish("Parameter");
             _eventAggregator.GetEvent<MainTitleEvent>().Publish("IOManagementView-Parameter");
         }
 

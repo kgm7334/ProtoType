@@ -10,11 +10,15 @@ using System.Threading.Tasks;
 
 namespace PrismMvvmApp.Models
 {
-    class IOCode_Source : BindableBase
+    public class IOCodeSource : BindableBase
     {
-        public IOCode_Source()
+        public IOCodeSource(string group, int id, string name, int position, enDataType type )
         {
-
+            Group = group;
+            ID = id;
+            Name = name;
+            Position = position;
+            DataType = type;
         }
 
         private string _group;
@@ -31,22 +35,22 @@ namespace PrismMvvmApp.Models
             set { SetProperty(ref _name, value); }
         }
 
-        private string _id;
-        public string ID
+        private int _id;
+        public int ID
         {
             get { return _id; }
             set { SetProperty(ref _id, value); }
         }
 
-        private string _position;
-        public string Position
+        private int _position;
+        public int Position
         {
             get { return _position; }
             set { SetProperty(ref _position, value); }
         }
 
-        private string _datatype;
-        public string DataType
+        private enDataType _datatype;
+        public enDataType DataType
         {
             get { return _datatype; }
             set { SetProperty(ref _datatype, value); }

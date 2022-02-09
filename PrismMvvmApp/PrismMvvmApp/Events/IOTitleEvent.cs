@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace PrismMvvmApp.Events
 {
-    class IO_TitleEvent : PubSubEvent<string>
+    class IOTitleEvent : PubSubEvent<string>
     {
     }
 }

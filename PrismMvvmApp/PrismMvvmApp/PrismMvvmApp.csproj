@@ -82,10 +82,18 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="Events\IO_TitleEvent.cs" />
+    <Compile Include="DAO\DataProvider.cs" />
+    <Compile Include="DAO\DataProviderDB.cs" />
+    <Compile Include="DAO\DataProviderFake.cs" />
+    <Compile Include="DAO\DataProvierFile.cs" />
+    <Compile Include="Events\IOTitleEvent.cs" />
     <Compile Include="Events\MainTitleEvent.cs" />
     <Compile Include="Events\MessageEvent.cs" />
-    <Compile Include="Models\IOCode_Source.cs" />
+    <Compile Include="Interface\IDataProvider.cs" />
+    <Compile Include="Models\CustomModelData.cs" />
+    <Compile Include="Models\enDataType.cs" />
+    <Compile Include="Models\BaseModelData.cs" />
+    <Compile Include="Models\IOCodeSource.cs" />
     <Compile Include="ViewModels\BaseModelViewModel.cs" />
     <Compile Include="ViewModels\CustomModelViewModel.cs" />
     <Compile Include="ViewModels\DialogViewModels\Add_IOCodeListDialogViewModel.cs" />

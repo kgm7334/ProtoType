@@ -2,7 +2,9 @@
 using Prism.Events;
 using Prism.Mvvm;
 using Prism.Services.Dialogs;
+using PrismMvvmApp.DAO;
 using PrismMvvmApp.Events;
+using PrismMvvmApp.Interface;
 using PrismMvvmApp.Models;
 using System;
 using System.Collections.Generic;
@@ -15,6 +17,7 @@ namespace PrismMvvmApp.ViewModels
 {
     class IOManagementViewModel : BindableBase
     {
+        private IDataProvider _dataProvider;
         private string _message;
         public string Message
         {
@@ -31,9 +34,9 @@ namespace PrismMvvmApp.ViewModels
 
         private IDialogService _dialogService;
 
-        private ObservableCollection<IOCode_Source> _iocodelist;
+        private ObservableCollection<IOCodeSource> _iocodelist;
 
-        public ObservableCollection<IOCode_Source> IOCodeList
+        public ObservableCollection<IOCodeSource> IOCodeList
         {
             get { return _iocodelist; }
             set { SetProperty(ref _iocodelist, value); }
@@ -79,15 +82,16 @@ namespace PrismMvvmApp.ViewModels
 
         public IOManagementViewModel(IEventAggregator eventAggregator, IDialogService dialogService)
         {
+            _dataProvider = new DataProvider(false, true);
             IOCodeListAddCommand = new DelegateCommand(ExcuteIOCodeListAdd);
             IOCodeListRemoveCommand = new DelegateCommand(ExcuteIOCodeListRemove);
             IOCodeListUpdateCommand = new DelegateCommand(ExcuteIOCodeListUpdate);
 
-            IOCodeList = new ObservableCollection<IOCode_Source>();
+            IOCodeList = new ObservableCollection<IOCodeSource>();
 
             Message = "This is I/O Management View";
             eventAggregator.GetEvent<MessageEvent>().Subscribe(MessageRecevied);
-            eventAggregator.GetEvent<IO_TitleEvent>().Subscribe(IOModeRecevied);
+            eventAggregator.GetEvent<IOTitleEvent>().Subscribe(IOModeRecevied);
             _dialogService = dialogService;
         }
 
@@ -135,6 +139,13 @@ namespace PrismMvvmApp.ViewModels
         private void IOModeRecevied(string payload)
         {
             IoModeTitle = payload;
+            if (payload.ToLower() == "input")
+                IOCodeList = _dataProvider.LoadInputCode();
+            else if (payload.ToLower() == "output")
+                IOCodeList = _dataProvider.LoadOutputCode();
+            else if (payload.ToLower() == "parameter")
+                IOCodeList = _dataProvider.LoadParameterCode();
+
         }
     }
 }
