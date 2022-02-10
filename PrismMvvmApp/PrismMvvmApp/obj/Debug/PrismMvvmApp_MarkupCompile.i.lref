@@ -1,8 +1,15 @@
 ﻿
-
+FD:\ProtoType\PrismMvvmApp\PrismMvvmApp\App.xaml;;
 FD:\ProtoType\PrismMvvmApp\PrismMvvmApp\Views\BaseModelTest.xaml;;
 FD:\ProtoType\PrismMvvmApp\PrismMvvmApp\Views\BaseModelView.xaml;;
 FD:\ProtoType\PrismMvvmApp\PrismMvvmApp\Views\CustomModelView.xaml;;
+FD:\ProtoType\PrismMvvmApp\PrismMvvmApp\Views\DialogViews\Add_IOCodeListDialogView.xaml;;
+FD:\ProtoType\PrismMvvmApp\PrismMvvmApp\Views\IOManagementView.xaml;;
+FD:\ProtoType\PrismMvvmApp\PrismMvvmApp\Views\HeaderView.xaml;;
+FD:\ProtoType\PrismMvvmApp\PrismMvvmApp\Views\LayoutDesignView.xaml;;
+FD:\ProtoType\PrismMvvmApp\PrismMvvmApp\Views\Main.xaml;;
+FD:\ProtoType\PrismMvvmApp\PrismMvvmApp\Views\EquipManagementView.xaml;;
 FD:\ProtoType\PrismMvvmApp\PrismMvvmApp\Views\MenuView.xaml;;
+FD:\ProtoType\PrismMvvmApp\PrismMvvmApp\Views\MonitoringView.xaml;;
 FD:\ProtoType\PrismMvvmApp\PrismMvvmApp\Views\TestSimmulatorView.xaml;;
 
