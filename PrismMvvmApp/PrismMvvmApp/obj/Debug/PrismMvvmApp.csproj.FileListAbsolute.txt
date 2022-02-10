@@ -278,3 +278,5 @@ D:\ProtoType\PrismMvvmApp\PrismMvvmApp\obj\Debug\PrismMvvmApp.csproj.CoreCompile
 D:\ProtoType\PrismMvvmApp\PrismMvvmApp\obj\Debug\PrismMvvmApp.csproj.CopyComplete
 D:\ProtoType\PrismMvvmApp\PrismMvvmApp\obj\Debug\PrismMvvmApp.exe
 D:\ProtoType\PrismMvvmApp\PrismMvvmApp\obj\Debug\PrismMvvmApp.pdb
+D:\ProtoType\PrismMvvmApp\PrismMvvmApp\obj\Debug\Views\BaseModelTest.g.cs
+D:\ProtoType\PrismMvvmApp\PrismMvvmApp\obj\Debug\Views\BaseModelTest.baml

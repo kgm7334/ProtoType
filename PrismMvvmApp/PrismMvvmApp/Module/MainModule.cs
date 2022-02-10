@@ -16,6 +16,7 @@ namespace PrismMvvmApp.Module
         public void OnInitialized(IContainerProvider containerProvider)
         {
             var region = containerProvider.Resolve<IRegionManager>();
+            //region.RegisterViewWithRegion("ContentsRegion", typeof(BaseModelTest));
             region.RegisterViewWithRegion("ContentsRegion",typeof(IOManagementView));
             region.RegisterViewWithRegion("HeaderRegion",typeof(HeaderView));
             region.RegisterViewWithRegion("MenuRegion", typeof(MenuView));

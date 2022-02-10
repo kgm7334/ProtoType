@@ -106,6 +106,9 @@
     <Compile Include="ViewModels\MenuViewModel.cs" />
     <Compile Include="ViewModels\MonitoringViewModel.cs" />
     <Compile Include="ViewModels\TestSimmulatorViewModel.cs" />
+    <Compile Include="Views\BaseModelTest.xaml.cs">
+      <DependentUpon>BaseModelTest.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\BaseModelView.xaml.cs">
       <DependentUpon>BaseModelView.xaml</DependentUpon>
     </Compile>
@@ -133,6 +136,10 @@
     <Compile Include="Views\TestSimmulatorView.xaml.cs">
       <DependentUpon>TestSimmulatorView.xaml</DependentUpon>
     </Compile>
+    <Page Include="Views\BaseModelTest.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Views\BaseModelView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
