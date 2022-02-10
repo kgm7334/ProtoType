@@ -31,6 +31,7 @@
             <RowDefinition/>
         </Grid.RowDefinitions>
         <RadioButton Grid.Row="0"  Grid.ColumnSpan="2" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Style="{StaticResource {x:Type ToggleButton}}" Command="{Binding GotoEquipManagementCommand}">
+            
             <RadioButton.Content>
                 <TextBlock Text="EqUip Management"/>
             </RadioButton.Content>
